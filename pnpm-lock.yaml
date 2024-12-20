@@ -30,8 +30,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       '@iconify-json/fa6-brands':
-        specifier: ^1.2.1
-        version: 1.2.1
+        specifier: ^1.2.5
+        version: 1.2.5
       '@iconify-json/fa6-regular':
         specifier: ^1.2.1
         version: 1.2.1
@@ -1186,8 +1186,8 @@ packages:
   '@fontsource/roboto@5.1.0':
     resolution: {integrity: sha512-cFRRC1s6RqPygeZ8Uw/acwVHqih8Czjt6Q0MwoUoDe9U3m4dH1HmNDRBZyqlMSFwgNAUKgFImncKdmDHyKpwdg==}
 
-  '@iconify-json/fa6-brands@1.2.1':
-    resolution: {integrity: sha512-b/o9bDLZCP8qJV2dydewH+OWrpqmX94b7jHYnqzKaVpbuRRQX/qA9AROsy7rqHYup8fN2fCElQHvm6OYFmjkEA==}
+  '@iconify-json/fa6-brands@1.2.5':
+    resolution: {integrity: sha512-U/iFfziz6jSN9zArOJZYTtoj2tQyh6MxPdI8M84DQ2kEulPaj8j+h9bqvjmzszNHmD7v+kmmKd/MLkMKk+3Zuw==}
 
   '@iconify-json/fa6-regular@1.2.1':
     resolution: {integrity: sha512-McnhzZl2Chltxh2gncS6sUBPq8Q0FrSAhHLkyxK63MW0ZMJx3V3H3Qf5vUIKJCiIV+moPe61v9lPlMS+Be2Zgg==}
@@ -6272,7 +6272,7 @@ snapshots:
 
   '@fontsource/roboto@5.1.0': {}
 
-  '@iconify-json/fa6-brands@1.2.1':
+  '@iconify-json/fa6-brands@1.2.5':
     dependencies:
       '@iconify/types': 2.0.0
 

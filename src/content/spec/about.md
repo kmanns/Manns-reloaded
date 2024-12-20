@@ -1,7 +1,7 @@
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+This is the home base for Khalil Manns.
 
-::github{repo="saicaca/fuwari"}
+::github{repo="kmanns/Manns-reloaded"}
 
 > ### Sources of images used in this site
 > - [Unsplash](https://unsplash.com/)
