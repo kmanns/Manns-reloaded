@@ -20,5 +20,7 @@
       "@/*": ["src/*"]
     }
   },
+  "types": ["astro/client"],
+  "verbatimModuleSyntax": true,
   "include": ["src/**/*"]
 }
