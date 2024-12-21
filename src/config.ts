@@ -51,7 +51,7 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/demo-avatar.png',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: 'assets/images/demo-avatar.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'Khalil Manns',
   bio: 'The Manns with the Plan: Girl Dad, Tech, Retro Tech, Content & Commerce, political hobbyist',
   links: [
