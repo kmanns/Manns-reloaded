@@ -1,6 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "strictNullChecks": true,
     "allowJs": false,
@@ -21,6 +22,5 @@
     }
   },
   "types": ["astro/client"],
-  "verbatimModuleSyntax": true,
   "include": ["src/**/*"]
 }
