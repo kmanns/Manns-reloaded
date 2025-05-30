@@ -11,7 +11,6 @@ const postsCollection = defineCollection({
     tags: z.array(z.string()).optional().default([]),
     category: z.string().optional().default(''),
     lang: z.string().optional().default(''),
-
     /* For internal use */
     prevTitle: z.string().default(''),
     prevSlug: z.string().default(''),
@@ -19,6 +18,16 @@ const postsCollection = defineCollection({
     nextSlug: z.string().default(''),
   }),
 })
+
+const micropostsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    date: z.date(),
+    tags: z.array(z.string()).optional(),
+  }),
+})
+
 export const collections = {
   posts: postsCollection,
+  microposts: micropostsCollection,
 }

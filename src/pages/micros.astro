@@ -1,0 +1,323 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../layouts/Layout.astro'
+
+// Get all micro posts and sort by date
+let allMicroposts
+let sortedPosts = []
+
+try {
+  allMicroposts = await getCollection('microposts')
+  sortedPosts = allMicroposts.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+  )
+} catch (error) {
+  console.error('Error loading microposts:', error)
+}
+
+// Format date function
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })
+}
+---
+
+<Layout title="Micro Posts">
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">Your Site</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/micros" class="active">Micros</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="micro-posts">
+    <header class="micro-posts-header">
+      <h1>Micro Posts</h1>
+      <p>Quick thoughts, observations, and snippets from daily life.</p>
+    </header>
+
+    <section class="posts-container">
+      {sortedPosts.length === 0 ? (
+        <div class="no-posts">
+          <p>No micro posts yet. Create your first one in <code>src/content/microposts/</code></p>
+        </div>
+      ) : (
+        sortedPosts.map(async (post) => {
+          const { Content } = await post.render();
+          return (
+            <article class="micro-post" id={`post-${post.slug}`}>
+              <time class="post-date" datetime={post.data.date.toISOString()}>
+                {formatDate(post.data.date)}
+              </time>
+              <div class="post-content">
+                <Content />
+              </div>
+              {post.data.tags && (
+                <div class="post-tags">
+                  {post.data.tags.map(tag => (
+                    <span class="tag">#{tag}</span>
+                  ))}
+                </div>
+              )}
+            </article>
+          );
+        })
+      )}
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Same styles as before, plus: */
+  .post-tags {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    color: #007acc;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+<style>
+<style is:global>
+  body {
+    background-color: #041E42 !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: #041E42 !important;
+  }
+</style>
+
+<style>
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-brand:hover {
+    color: #6B9BD1;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: #ffffff;
+  }
+
+  .nav-links a.active {
+    color: #6B9BD1;
+  }
+
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #6B9BD1;
+  }
+
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  
+
+  .micro-posts-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .micro-posts-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+
+  .micro-posts-header p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin: 0;
+  }
+
+  .posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .micro-post {
+    border-left: 3px solid #6B9BD1;
+    padding: 1.5rem;
+    margin-left: 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+  }
+
+  .micro-post:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #ffffff;
+    transform: translateX(4px);
+  }
+
+  .post-date {
+    display: block;
+    font-size: 0.875rem;
+    color: #B8C5D1;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .post-content {
+    color: #ffffff;
+  }
+
+  .post-content p {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .post-tags {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    color: #6B9BD1;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  .no-posts {
+    text-align: center;
+    padding: 2rem;
+    color: #cccccc;
+    font-style: italic;
+  }
+
+  .no-posts code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #ffffff;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .micro-posts {
+      padding: 1.5rem 1rem;
+    }
+
+    .micro-posts-header h1 {
+      font-size: 2rem;
+    }
+
+    .micro-posts-header {
+      margin-bottom: 2rem;
+    }
+
+    .posts-container {
+      gap: 1.5rem;
+    }
+
+    .micro-post {
+      padding: 1rem;
+    }
+
+    .micro-post:hover {
+      transform: translateX(2px);
+    }
+  }
+
+  /* Dark mode adjustments (maintaining the navy theme) */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #041E42;
+    }
+
+    .micro-posts {
+      background-color: #041E42;
+    }
+
+    .micro-post:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+</style>
+</style>
