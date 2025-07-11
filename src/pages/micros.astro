@@ -3,8 +3,10 @@ import { getCollection } from 'astro:content'
 import Layout from '../layouts/Layout.astro'
 
 // Get all micro posts and sort by date
+// biome-ignore lint/suspicious/noImplicitAnyLet: <explanation>
 let allMicroposts
-let sortedPosts = []
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+let sortedPosts: any[] = []
 
 try {
   allMicroposts = await getCollection('microposts')
@@ -28,20 +30,20 @@ function formatDate(date: Date): string {
 <Layout title="Micro Posts">
   <nav class="main-nav">
     <div class="nav-container">
-      <a href="/" class="nav-brand">Your Site</a>
+      <a href="/" class="nav-brand">Khalil Manns</a>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/archive/">Archive</a></li>
         <li><a href="/micros" class="active">Micros</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="https://github.com/kmanns">Github</a></li>
       </ul>
     </div>
   </nav>
 
   <main class="micro-posts">
     <header class="micro-posts-header">
-      <h1>Micro Posts</h1>
+      <h1>Anti-Social Media</h1>
       <p>Quick thoughts, observations, and snippets from daily life.</p>
     </header>
 
@@ -63,7 +65,7 @@ function formatDate(date: Date): string {
               </div>
               {post.data.tags && (
                 <div class="post-tags">
-                  {post.data.tags.map(tag => (
+                  {post.data.tags.map((tag: unknown): any => (
                     <span class="tag">#{tag}</span>
                   ))}
                 </div>
