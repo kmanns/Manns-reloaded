@@ -40,6 +40,11 @@ export const siteConfig: SiteConfig = {
 export const navBarConfig: NavBarConfig = {
   links: [
     LinkPreset.Home,
+    {
+      name: 'Micros',
+      url: '/micros/',                                   // This should match your micros.astro route
+      external: false,                                  // Internal link, so set to false
+    },
     LinkPreset.Archive,
     LinkPreset.About,
     {

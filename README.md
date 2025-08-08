@@ -1,63 +1,142 @@
-# 🍥Fuwari
+# Khalil Manns - Personal Blog
 
-A static blog template built with [Astro](https://astro.build).
+A modern personal blog built with [Astro](https://astro.build) and the [Fuwari](https://github.com/saicaca/fuwari) theme. This site serves as my digital space for sharing thoughts, insights, and updates on technology, retro tech, content creation, and more.
 
-[**🖥️ Live Demo (Vercel)**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**📦 Old Hexo Version**](https://github.com/saicaca/hexo-theme-vivia)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 中文**](https://github.com/saicaca/fuwari/blob/main/README.zh-CN.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 日本語**](https://github.com/saicaca/fuwari/blob/main/README.ja-JP.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 한국어**](https://github.com/saicaca/fuwari/blob/main/README.ko.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 Español**](https://github.com/saicaca/fuwari/blob/main/README.es.md)
+## Features
 
-> README version: `2024-09-10`
+- **📝 Blog Posts** - Long-form articles and deep dives into topics I'm passionate about
+- **🐦 Micro Posts** - Short, tweet-like updates and quick thoughts (similar to Twitter/X posts)
+- **🌙 Dark/Light Mode** - Automatic theme switching with user preference
+- **📱 Responsive Design** - Optimized for all devices
+- **🔍 Search Functionality** - Find content quickly across all posts
+- **📋 Table of Contents** - Easy navigation for longer articles
+- **💬 Comments** - Engage with readers through integrated comments
+- **🏷️ Tags & Categories** - Organized content discovery
 
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
+## Content Types
 
-## ✨ Features
+### Blog Posts
+Traditional long-form articles covering:
+- Technology insights and tutorials
+- Retro technology exploration
+- Content creation and commerce
+- Political commentary and analysis
+- Parenting and personal reflections
 
-- [x] Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
-- [x] Smooth animations and page transitions
-- [x] Light / dark mode
-- [x] Customizable theme colors & banner
-- [x] Responsive design
-- [ ] Comments
-- [x] Search
-- [ ] TOC
+### Micro Posts
+Quick thoughts and updates, similar to social media posts:
+- Brief tech observations
+- Daily insights
+- Quick tips and tricks
+- Real-time thoughts and reactions
+- Links to interesting content
 
-## 🚀 How to Use
+## Tech Stack
 
-1. [Generate a new repository](https://github.com/saicaca/fuwari/generate) from this template or fork this repository.
-2. To edit your blog locally, clone your repository, run `pnpm install` AND `pnpm add sharp` to install dependencies.
-   - Install [pnpm](https://pnpm.io) `npm install -g pnpm` if you haven't.
-3. Edit the config file `src/config.ts` to customize your blog.
-4. Run `pnpm new-post <filename>` to create a new post and edit it in `src/content/posts/`.
-5. Deploy your blog to Vercel, Netlify, GitHub Pages, etc. following [the guides](https://docs.astro.build/en/guides/deploy/). You need to edit the site configuration in `astro.config.mjs` before deployment.
+- **Framework**: [Astro](https://astro.build) - Modern static site generator
+- **Styling**: [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- **Theme**: [Fuwari](https://github.com/saicaca/fuwari) - Clean, customizable Astro theme
+- **Deployment**: [Github Pages](https://github.com) - Fast, reliable hosting
+- **Icons**: [Iconify](https://iconify.design) - Comprehensive icon library
 
-## ⚙️ Frontmatter of Posts
+## Getting Started
+
+### Prerequisites
+- Node.js (version 18 or higher)
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <repository-name>
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+pnpm add sharp
+```
+
+3. Start the development server:
+```bash
+pnpm dev
+```
+
+4. Open your browser and navigate to `http://localhost:4321`
+
+### Available Commands
+
+| Command | Action |
+|---------|--------|
+| `pnpm install && pnpm add sharp` | Install dependencies |
+| `pnpm dev` | Start local dev server at `localhost:4321` |
+| `pnpm build` | Build production site to `./dist/` |
+| `pnpm preview` | Preview build locally before deploying |
+| `pnpm new-post <filename>` | Create a new blog post |
+| `pnpm astro ...` | Run CLI commands like `astro add`, `astro check` |
+
+## Content Management
+
+### Creating Blog Posts
+
+Create new blog posts in the `src/content/posts/` directory:
+
+```bash
+pnpm new-post my-new-post
+```
+
+### Creating Micro Posts
+
+Micro posts are stored in the `src/content/micro-posts/` directory. Each micro post should include:
 
 ```yaml
 ---
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
-image: ./cover.jpg
-tags: [Foo, Bar]
-category: Front-end
-draft: false
-lang: jp      # Set only if the post's language differs from the site's language in `config.ts`
+published: 2024-01-01
+tags: [tag1, tag2]
 ---
+
+Your short content here (tweet-like format)
 ```
 
-## 🧞 Commands
+### Configuration
 
-All commands are run from the root of the project, from a terminal:
+Customize the blog by editing `src/config.ts`:
+- Site information (title, description, author)
+- Navigation menu items
+- Social media links
+- Theme colors and settings
+- Banner and favicon configuration
 
-| Command                             | Action                                           |
-|:------------------------------------|:-------------------------------------------------|
-| `pnpm install` AND `pnpm add sharp` | Installs dependencies                            |
-| `pnpm dev`                          | Starts local dev server at `localhost:4321`      |
-| `pnpm build`                        | Build your production site to `./dist/`          |
-| `pnpm preview`                      | Preview your build locally, before deploying     |
-| `pnpm new-post <filename>`          | Create a new post                                |
-| `pnpm astro ...`                    | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro --help`                 | Get help using the Astro CLI                     |
+## Deployment
+
+This blog is optimized for deployment on various platforms:
+
+1. **Vercel** (recommended):
+   - Connect your GitHub repository
+   - Deploy automatically on push
+
+2. **Netlify**:
+   - Build command: `pnpm build`
+   - Publish directory: `dist`
+
+3. **GitHub Pages**:
+   - Follow the [Astro deployment guide](https://docs.astro.build/en/guides/deploy/)
+
+## About the Author
+
+**Khalil Manns** - "The Manns with the Plan"
+- Girl Dad passionate about technology and family
+- Technology enthusiast with a love for both cutting-edge and retro tech
+- Content creator focused on commerce and digital experiences
+- Political hobbyist with thoughtful commentary
+- Connect with me on [Bluesky](https://bsky.app/profile/kmanns.bsky.social), [GitHub](https://github.com/kmanns), and [LinkedIn](https://www.linkedin.com/in/khalilmanns/)
+
+## License
+
+This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) - feel free to use and modify with attribution.
+
+---
+
+*Built with ❤️ using Astro and the Fuwari theme*
