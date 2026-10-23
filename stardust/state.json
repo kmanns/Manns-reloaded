@@ -1,7 +1,7 @@
 {
   "_provenance": {
     "writtenBy": "stardust:prototype",
-    "writtenAt": "2026-10-23T15:55:07Z",
+    "writtenAt": "2026-10-23T17:49:37Z",
     "stardustVersion": "0.34.1"
   },
   "site": {
@@ -145,7 +145,7 @@
       "url": "https://www.khalilmanns.com/posts/mar8-25/mar8-25/",
       "title": "March Update and To-Do - Khalil Manns",
       "type": null,
-      "status": "directed",
+      "status": "prototyped",
       "history": [
         {
           "status": "extracted",
@@ -154,12 +154,16 @@
         {
           "status": "directed",
           "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-23T17:49:37Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/posts-mar8-25-mar8-25.json",
-      "prototypePath": null,
+      "prototypePath": "stardust/prototypes/posts-mar8-25-mar8-25-proposed.html",
       "migratedPath": null
     },
     {
@@ -189,7 +193,7 @@
       "url": "https://www.khalilmanns.com/posts/guide/",
       "title": "Simple Guides for Fuwari - Khalil Manns",
       "type": null,
-      "status": "directed",
+      "status": "prototyped",
       "history": [
         {
           "status": "extracted",
@@ -198,12 +202,16 @@
         {
           "status": "directed",
           "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-23T17:49:37Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/posts-guide.json",
-      "prototypePath": null,
+      "prototypePath": "stardust/prototypes/posts-guide-proposed.html",
       "migratedPath": null
     }
   ]

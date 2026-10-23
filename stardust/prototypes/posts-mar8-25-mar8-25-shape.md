@@ -95,8 +95,10 @@ headings, code, tables, quotes and a cover image).
 
 ## Layout strategy
 
-Container 1200px. Reading column centred at 68ch; with a contents rail the
-grid is [column 68ch | rail 240px] left-aligned within the container.
+Container 1200px. Reading column 68ch, left-aligned under the full-width
+record row (revised at render: one strong left edge reads better than a
+centred column under a full-width rule). With a contents rail the grid is
+[column 68ch | rail 240px].
 Header-to-title spacing 48px; section padding 64 / 48 / 32.
 
 ## Key states

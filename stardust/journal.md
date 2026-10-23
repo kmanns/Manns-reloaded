@@ -118,3 +118,24 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** post page brief (posts-mar8-25-mar8-25).
 
 ---
+
+## 2026-10-23T18:10:00Z — prototype — post archetype prototyped (two renders)
+
+**Prompt:** Owner said "go" on the post brief.
+
+**Decisions:**
+- One generator (stardust/prototypes/build-post.mjs) renders the archetype for the March post and the theme guide, reusing the approved home chrome verbatim and markdown-it for bodies.
+- Records row (No. / Filed / Department / Length) above a serif title; 68ch column left-aligned under it; contents rail only with ≥ 2 sections at ≥ 1100px; record footer with licence and previous/next records.
+- Duplicate in-body title H1 dropped.
+
+**Artifacts touched:**
+- stardust/prototypes/posts-mar8-25-mar8-25-proposed.html, posts-guide-proposed.html, build-post.mjs, assets/guide-cover.webp — created
+- stardust/prototypes/posts-mar8-25-mar8-25-shape.md — updated (left-aligned column)
+- stardust/state.json — two pages → prototyped
+
+**Open questions:**
+- Bio; "Manns Systems" name; demo posts.
+
+**Next:** owner review; "approve post", then micros + about/archive.
+
+---
