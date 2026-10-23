@@ -4,3 +4,4 @@
 {"ts":"2026-10-23T02:14:30Z","skill":"stardust:extract","phase":"brand-surface-extraction","event":"end"}
 {"ts":"2026-10-23T02:14:30Z","skill":"stardust:extract","phase":"seed","event":"end"}
 {"ts":"2026-10-23T02:16:34Z","skill":"stardust:extract","phase":"state-and-report","event":"end","detail":"8/8 live, vision 8 ok"}
+{"ts":"2026-10-23T02:21:29Z","skill":"stardust:prototype","phase":"shape","event":"end","detail":"index brief written; awaiting owner confirmation"}
