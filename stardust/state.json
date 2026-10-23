@@ -1,7 +1,7 @@
 {
   "_provenance": {
-    "writtenBy": "stardust:extract",
-    "writtenAt": "2026-10-23T02:13:45Z",
+    "writtenBy": "stardust:direct",
+    "writtenAt": "2026-10-23T02:19:59Z",
     "stardustVersion": "0.34.1"
   },
   "site": {
@@ -12,7 +12,12 @@
     "totalDiscovered": 23,
     "crawled": 8
   },
-  "direction": null,
+  "direction": {
+    "resolvedAt": "2026-10-23T02:40:00Z",
+    "phrase": "I'd like to redesign www.khalilmanns.com ... retro-futuristic technology company feel. Like a 1980's Microsoft logo; ... Maniac ... still be based in Astro (+ Penn State Blue/cream, identity-first home)",
+    "directionFile": "stardust/direction.md",
+    "iaFidelity": "reimagined"
+  },
   "flow": "redesign",
   "flowChosenAt": "2026-10-23T02:13:45Z",
   "flowSource": "user-phrase",
@@ -22,11 +27,15 @@
       "url": "https://www.khalilmanns.com/",
       "title": "Khalil Manns - Homepage of the Manns himself",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:12.439Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,
@@ -40,11 +49,15 @@
       "url": "https://www.khalilmanns.com/about/",
       "title": "About - Khalil Manns",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:12.041Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,
@@ -58,11 +71,15 @@
       "url": "https://www.khalilmanns.com/micros/",
       "title": "Micro Posts - Khalil Manns",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:11.751Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,
@@ -76,11 +93,15 @@
       "url": "https://www.khalilmanns.com/archive/",
       "title": "Archive - Khalil Manns",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:12.987Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,
@@ -94,11 +115,15 @@
       "url": "https://www.khalilmanns.com/archive/category/Blogging/",
       "title": "Archive - Khalil Manns",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:19.919Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,
@@ -112,11 +137,15 @@
       "url": "https://www.khalilmanns.com/posts/mar8-25/mar8-25/",
       "title": "March Update and To-Do - Khalil Manns",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:18.846Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,
@@ -130,11 +159,15 @@
       "url": "https://www.khalilmanns.com/posts/feb1-25/feb1-25/",
       "title": "Inching Toward Launch - Khalil Manns",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:18.629Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,
@@ -148,11 +181,15 @@
       "url": "https://www.khalilmanns.com/posts/guide/",
       "title": "Simple Guides for Fuwari - Khalil Manns",
       "type": null,
-      "status": "extracted",
+      "status": "directed",
       "history": [
         {
           "status": "extracted",
           "at": "2026-10-23T02:12:19.555Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
         }
       ],
       "stale": false,

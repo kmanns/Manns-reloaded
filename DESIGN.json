@@ -1,0 +1,357 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct",
+    "writtenAt": "2026-10-23T02:40:00Z",
+    "read": [
+      "stardust/reference/midnight-editorial.md",
+      "stardust/current/_brand-extraction.json",
+      "PRODUCT.md",
+      "DESIGN.md"
+    ],
+    "stardustVersion": "0.34.1"
+  },
+  "schemaVersion": 2,
+  "extensions": {
+    "colorMeta": {
+      "source": "owner-pinned (stardust/reference/midnight-editorial.md)",
+      "format": "hex retained: owner spec is the normative source",
+      "pairs": [
+        {
+          "fg": "#001E44",
+          "bg": "#F5F5DC",
+          "ratio": 14.95
+        },
+        {
+          "fg": "#1B2433",
+          "bg": "#F5F5DC",
+          "ratio": 14.09
+        },
+        {
+          "fg": "#4A5160",
+          "bg": "#F5F5DC",
+          "ratio": 7.2
+        },
+        {
+          "fg": "#2D6194",
+          "bg": "#F5F5DC",
+          "ratio": 5.84
+        },
+        {
+          "fg": "#6B9BD1",
+          "bg": "#F5F5DC",
+          "ratio": 2.62,
+          "use": "non-text accent only"
+        },
+        {
+          "fg": "#F5F5DC",
+          "bg": "#001E44",
+          "ratio": 14.95
+        },
+        {
+          "fg": "#C8C8B0",
+          "bg": "#001E44",
+          "ratio": 9.73
+        },
+        {
+          "fg": "#98C7FF",
+          "bg": "#001E44",
+          "ratio": 9.41
+        },
+        {
+          "fg": "#6B9BD1",
+          "bg": "#001E44",
+          "ratio": 5.7
+        },
+        {
+          "fg": "#F5F5DC",
+          "bg": "#0A2C5A",
+          "ratio": 12.48
+        }
+      ],
+      "modes": {
+        "light": {
+          "ground": "intake-cream",
+          "panel": "backlit-panel",
+          "text": "case-file-ink",
+          "heading": "nittany-navy",
+          "link": "trial-blue",
+          "accent": "ice-blue",
+          "rule": "rule-light"
+        },
+        "dark": {
+          "ground": "nittany-navy",
+          "panel": "night-panel",
+          "text": "intake-cream",
+          "heading": "intake-cream",
+          "link": "phosphor-ice",
+          "accent": "ice-blue",
+          "rule": "rule-dark",
+          "muted": "night-muted"
+        }
+      }
+    },
+    "typographyMeta": {
+      "wordmark": "Alfa Slab One (OFL) \u2014 wide heavy slab, the closest free match to the IBM-derived Maniac/Neberdine logo",
+      "headings": "Source Serif 4 (owner-pinned)",
+      "body": "Inter (owner-pinned; on the reflex-reject list, 1 hit < 3 threshold)",
+      "mono": "JetBrains Mono (owner-pinned, already in the project)",
+      "hosting": "self-host via @fontsource packages in Astro; Google Fonts acceptable for static prototypes"
+    },
+    "shadows": [],
+    "motion": {
+      "register": "editorial",
+      "registerRationale": "PRODUCT.md personality: reading-first personal publication; theatrics stay in static marks, not movement",
+      "easings": {
+        "entrance": "cubic-bezier(0.2, 0.7, 0.2, 1)",
+        "transition": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "durations": {
+        "enter": 320,
+        "stagger": 60
+      },
+      "reducedMotion": "all motion off"
+    },
+    "breakpoints": {
+      "layout": [
+        {
+          "name": "tablet",
+          "minWidth": 768
+        },
+        {
+          "name": "desktop",
+          "minWidth": 1100
+        }
+      ],
+      "containerMaxWidth": 1200,
+      "readingMax": "68ch"
+    },
+    "motifs": {
+      "stripeMask": {
+        "purpose": "IBM / Maniac striped letterforms",
+        "rule": "horizontal bars cut through the wordmark; bar height \u2248 1/9 of cap height, gap equal; applied by CSS mask so text remains selectable and readable by assistive tech",
+        "scope": "wordmark, masthead, one divider style"
+      },
+      "chamferedCorner": {
+        "purpose": "lab backlit wall panels (hexagonal/angled)",
+        "rule": "one clipped corner (12\u201316px) on cards and masthead only"
+      },
+      "subjectBadge": {
+        "purpose": "Maniac test-subject ID badges",
+        "rule": "navy tag, label caps, numbers derived from real post order and dates only"
+      }
+    },
+    "componentStyle": {
+      "buttons": {
+        "primary": "navy solid, cream text, 2px radius",
+        "secondary": "1px navy outline, cream fill on hover"
+      },
+      "cards": {
+        "bg": "backlit-panel",
+        "radius": "8px",
+        "hover": "2px ice-blue top rule, no lift"
+      },
+      "inputs": {
+        "style": "bottom rule only; thickens to ice blue on focus"
+      },
+      "dualCTAPattern": "none"
+    },
+    "systemComponentRoles": {
+      "header": {
+        "purpose": "wordmark lockup + plain nav (Home, Posts, Micros, Archive, About) + search + theme switch",
+        "position": "top, not sticky"
+      },
+      "footer": {
+        "purpose": "owner copyright, RSS, sitemap, social links; no theme credit",
+        "position": "bottom"
+      },
+      "identity-intro": {
+        "purpose": "who Khalil is, first on the home page",
+        "constraint": "owner copy only; placeholder for anything not yet written"
+      },
+      "subject-file": {
+        "purpose": "post header: title, badge row (ordinal, date, category), tags",
+        "constraint": "real values only"
+      }
+    },
+    "iaPriorities": [
+      {
+        "signal": "identity-first",
+        "evidence": "owner answer: homepage leads with 'Who I am, then posts'",
+        "preserveAs": "first-viewport",
+        "scope": "home",
+        "mutability": "movable"
+      },
+      {
+        "signal": "latest-writing",
+        "evidence": "stardust/current/pages/index.json lists 6 posts; PRODUCT.md principle 2",
+        "preserveAs": "above second fold on home",
+        "scope": "home",
+        "mutability": "movable"
+      },
+      {
+        "signal": "micros-in-system",
+        "evidence": "brand-review tension agent\u00b7layout-split",
+        "preserveAs": "shared layout",
+        "scope": "site-wide",
+        "mutability": "locked"
+      }
+    ],
+    "voice": {
+      "do": [
+        "Corporate form labels as eyebrows: 'Subject file', 'Intake', 'Trial log', 'Records'",
+        "Plain nav labels: Home, Posts, Micros, Archive, About",
+        "Keep the owner's casual voice in all body copy"
+      ],
+      "dont": [
+        "Invent bio, titles, employers or stats",
+        "Use synthwave or 'cyber' vocabulary",
+        "Rename the owner's own headings or post titles"
+      ]
+    },
+    "divergence": {
+      "mode": "rebrand",
+      "modeReason": "owner pinned a new palette and type (midnight-editorial.md) and named the captured surface (stock Fuwari) as the thing to replace; captured signal is a theme default, not the owner's brand",
+      "seed": {
+        "anchors": [
+          {
+            "ref": "Maniac (Netflix, 2018), Wikipedia + Netflix title page",
+            "implies": {
+              "decade": "1980s (alternate)",
+              "craft": "corporate identity / signage",
+              "register": "deadpan corporate fiction"
+            },
+            "picked_by": "anchor-reference: Maniac"
+          },
+          {
+            "ref": "IBM 8-bar logo; 1980s Microsoft logo",
+            "implies": {
+              "craft": "striped wordmark"
+            },
+            "picked_by": "anchor-reference: IBM / Microsoft logos"
+          },
+          {
+            "ref": "Midnight Editorial (owner spec)",
+            "implies": {
+              "ground_family": "cream paper",
+              "register": "editorial reading"
+            },
+            "picked_by": "user-constraint"
+          }
+        ],
+        "ground_family": {
+          "value": "cream (owner-pinned #F5F5DC)",
+          "override": "direction-driven"
+        },
+        "rolled": []
+      },
+      "font_deck": {
+        "name": "owner-specified + wordmark",
+        "picked_by": "user-constraint (Source Serif 4 / Inter / JetBrains Mono); reasoned: Maniac logo (Alfa Slab One)"
+      },
+      "palette": {
+        "source": "owner-pinned",
+        "picked_by": "user-constraint"
+      },
+      "anti_toolbox_count": 5,
+      "anti_toolbox_hits": [
+        {
+          "move": "Cream-family page ground",
+          "justification": "Owner explicitly asked for 'a softer cream color' instead of white. (#F5F5DC also misses the deterministic test: HSL S\u224856% > 40%.)"
+        },
+        {
+          "move": "Monospace for metadata",
+          "justification": "Owner spec assigns JetBrains Mono to dates, reading time and tags; it also stands in for the CRT terminal text of Maniac's GRTA computer room."
+        },
+        {
+          "move": "Serial / ID metadata stamps",
+          "justification": "Maniac's key art shows numbered test-subject badges (1 and 9); the badge is the show's most recognizable prop. Bounded: post headers and cards only, numbers derived from real content."
+        },
+        {
+          "move": "Examiner / institutional voice register",
+          "justification": "The owner's reference is a fictional pharma trial company; the register is the point. Bounded to eyebrow labels; nav labels and prose stay plain."
+        },
+        {
+          "move": "Dark mode editorial (dark ground + cream text)",
+          "justification": "Ground is Penn State Blue, the owner's alma mater color he asked for, not ink black; dark mode is the existing site's feature."
+        }
+      ],
+      "off_toolbox_moves": [
+        {
+          "move": "Striped slab wordmark via CSS mask",
+          "basis": "Maniac's logo is literally the IBM striped treatment; applied to MANNS it becomes his mark"
+        },
+        {
+          "move": "Backlit panels lighter than the ground",
+          "basis": "Maniac's lab walls are backlit white panels; inverts the usual 'cards darker/shadowed' depth"
+        },
+        {
+          "move": "One chamfered panel corner",
+          "basis": "the lab's angled/hexagonal wall panels in the Netflix still"
+        }
+      ],
+      "removed": [
+        {
+          "move": "Glassmorphism nav (owner spec)",
+          "reason": "impeccable absolute ban; replaced with a solid cream header"
+        },
+        {
+          "move": "Sticky top navigation",
+          "reason": "not needed for a reading site; avoids the SaaS silhouette"
+        }
+      ],
+      "brand_faithful_inversions": [],
+      "owner_pinned_inversions": [
+        {
+          "rule": "impeccable 'OKLCH only'",
+          "kept": "hex tokens",
+          "why": "owner spec is the normative source"
+        },
+        {
+          "rule": "impeccable 'no side stripes'",
+          "kept": "4px left rule on blockquotes and admonitions",
+          "why": "owner spec \u00a7 Components: Admonitions"
+        }
+      ],
+      "audit_adjustments": [
+        {
+          "from": "off_toolbox_moves",
+          "to": "anti_toolbox_hits",
+          "move": "Subject badges",
+          "reason": "a numbered badge is a serial stamp whatever the source; kept with justification and a real-data rule"
+        }
+      ],
+      "references_used": [
+        "https://en.wikipedia.org/wiki/Maniac_(miniseries)",
+        "https://www.netflix.com/title/80124522",
+        "stardust/reference/midnight-editorial.md"
+      ]
+    }
+  },
+  "narrative": {
+    "northStar": "The front office of a 1980s tech company whose only product is Khalil Manns.",
+    "overview": "Cream paper and Penn State navy; a striped slab wordmark; numbered subject badges and corporate form labels; calm editorial reading inside posts.",
+    "keyCharacteristics": [
+      "striped MANNS wordmark",
+      "backlit panels on cream",
+      "subject badges from real data",
+      "form-label eyebrows",
+      "calm 68ch reading column"
+    ],
+    "rules": [
+      "Every number has a source",
+      "No shadows, glass, neon or gradients",
+      "Header is not sticky",
+      "Theatrics never enter post body text"
+    ],
+    "dos": [
+      "label-caps eyebrows",
+      "navy solid primary button",
+      "ice-blue hover rules"
+    ],
+    "donts": [
+      "synthwave imagery",
+      "two-button hero CTA",
+      "invented bio or stats"
+    ]
+  }
+}
