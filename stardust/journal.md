@@ -101,3 +101,20 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner review; "approve index", then the post page.
 
 ---
+
+## 2026-10-23T04:40:00Z — prototype — home approved
+
+**Prompt:** Owner: "approve index".
+
+**Decisions:**
+- index → approved (single variant; fold-back not applicable).
+
+**Artifacts touched:**
+- stardust/state.json — updated
+
+**Open questions:**
+- Bio text; "Manns Systems" name; demo posts.
+
+**Next:** post page brief (posts-mar8-25-mar8-25).
+
+---

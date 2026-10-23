@@ -1,7 +1,7 @@
 {
   "_provenance": {
     "writtenBy": "stardust:prototype",
-    "writtenAt": "2026-10-23T02:36:38Z",
+    "writtenAt": "2026-10-23T15:55:07Z",
     "stardustVersion": "0.34.1"
   },
   "site": {
@@ -27,7 +27,7 @@
       "url": "https://www.khalilmanns.com/",
       "title": "Khalil Manns - Homepage of the Manns himself",
       "type": null,
-      "status": "prototyped",
+      "status": "approved",
       "history": [
         {
           "status": "extracted",
@@ -40,6 +40,10 @@
         {
           "status": "prototyped",
           "at": "2026-10-23T02:36:38Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-23T15:55:07Z"
         }
       ],
       "stale": false,
