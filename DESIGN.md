@@ -186,6 +186,12 @@ signature, applied to cards and the masthead only.
   and a value column; collapses to stacked rows under 640px.
 - **Records ledger:** numbered rows (No., Filed, Record, Department) with a
   2px ice-blue rule that draws across the row top on hover.
+- **Terminal:** desktop-only console beside the home wordmark (≥ 1100px):
+  navy panel (night panel in dark mode), one chamfered corner, mono header
+  strip with a "Local mode" status, a fixed 280px height whose log scrolls,
+  and a prompt that answers from site content. Without JS it shows a static
+  transcript. Replaces the wordmark's run-on bars at desktop widths; the
+  bars stay below 1100px.
 - **Boot screen:** first visit only; navy field, striped MANNS lockup,
   version label, striped progress fill and a mono percentage; ≤ 1.6s, skippable,
   never shown without JS or with reduced motion.

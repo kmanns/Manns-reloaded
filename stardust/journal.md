@@ -81,3 +81,23 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner review; "approve index", then prototype the post page.
 
 ---
+
+## 2026-10-23T04:30:00Z — prototype — home iteration: terminal replaces desktop bars
+
+**Prompt:** Owner likes the design but the long run-on stripe bars beside KHALIL / MANNS on desktop "hurt my eyes"; chose a terminal widget over a stand-in logo mark.
+
+**Decisions:**
+- At ≥ 1100px the run-on bars are hidden (striped letters kept); a Manns Systems terminal sits beside the name. Below 1100px nothing changes.
+- Terminal answers only from site content through one respond() function, the hook for a future backend. "Local mode" label states plainly that it is not connected to anything.
+- Fixed 280px panel height so typing never shifts the page.
+
+**Artifacts touched:**
+- stardust/prototypes/index-proposed.html, stardust/prototypes/index-shape.md — updated
+- DESIGN.md — updated (Terminal component)
+
+**Open questions:**
+- Bio text; "Manns Systems" name; demo posts.
+
+**Next:** owner review; "approve index", then the post page.
+
+---

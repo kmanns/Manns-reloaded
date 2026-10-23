@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <!-- stardust:provenance
-  writtenBy:         stardust:prototype (rendered via impeccable new-work, code-led)
+  writtenBy:         stardust:prototype/iterate (rendered via impeccable new-work, code-led)
+  iteratedVia:       impeccable:layout, impeccable:delight (owner: remove desktop run-on bars; add terminal widget)
   writtenAt:         2026-10-23T03:30:00Z
   page:              index
   pageUrl:           https://www.khalilmanns.com/
@@ -48,6 +49,8 @@
       mediaRules: [1099, 767, 640]
       result: "no horizontal overflow; nav font 15px, gap 10px at 360; ID card goes horizontal under 768; ledger collapses to two-column rows"
   visionCheck: { verdict: pass, observations: [ "striped wordmark reads as the IBM/Maniac treatment", "primary action visible in first viewport at 1440x900 and 390x844", "dark mode keeps hierarchy" ] }
+  iteration-2026-10-23:
+    - { change: "desktop >=1100px: run-on bars removed, terminal added", tests: "help/posts/unknown/contact/history/clear pass; no-JS shows static transcript, input hidden; 4-viewport loop clean" }
   validationScreens: stardust/validation/index/{desktop,tablet,mobile,narrow}.png
   stardustVersion:   0.34.1
 -->
@@ -297,6 +300,44 @@ img { display: block; max-width: 100%; height: auto; }
 .placeholder-eyebrow { display: block; font: 700 var(--label)/1.4 var(--mono-font-family); letter-spacing: 0.08em; color: var(--color-heading); }
 .placeholder-shape { display: block; margin-top: 4px; color: var(--color-muted); font-style: italic; }
 
+/* Terminal: desktop only, beside the name */
+.terminal { display: none; }
+@media (min-width: 1100px) {
+  .identity-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--spacing-xl); align-items: start; }
+  .name-bar { display: none; }
+  .terminal {
+    display: flex; flex-direction: column; height: 17.5rem;
+    background: var(--nittany-navy); color: var(--intake-cream);
+    clip-path: polygon(0 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%);
+    font: 500 var(--body-sm)/1.6 var(--mono-font-family);
+  }
+}
+:root[data-theme="dark"] .terminal { background: var(--night-panel); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .terminal { background: var(--night-panel); } }
+.terminal-bar { display: flex; justify-content: space-between; align-items: center; gap: var(--spacing-md); padding: 10px 20px; border-bottom: 1px solid rgba(245, 245, 220, 0.16); }
+.terminal-name { color: var(--intake-cream); font: 700 var(--label)/1.4 var(--mono-font-family); letter-spacing: 0.14em; text-transform: uppercase; }
+.terminal-mode { display: inline-flex; align-items: center; gap: 8px; color: var(--night-muted); font: 500 var(--label)/1.4 var(--mono-font-family); letter-spacing: 0.08em; text-transform: uppercase; }
+.terminal-led { width: 7px; height: 7px; border-radius: 50%; background: var(--phosphor-ice); }
+.terminal-log { flex: 1 1 auto; overflow-y: auto; padding: 14px 20px 6px; scrollbar-width: thin; scrollbar-color: rgba(245, 245, 220, 0.3) transparent; }
+.terminal-log:focus-visible { outline-offset: -3px; }
+.terminal-log p { margin: 0 0 4px; max-width: 72ch; }
+.terminal-log .cmd { color: var(--phosphor-ice); }
+.terminal-log .cmd::before { content: '> '; color: var(--night-muted); }
+.terminal-log .out { margin-bottom: 12px; color: var(--intake-cream); }
+.terminal-log .out-cont { margin-bottom: 4px; }
+.terminal-log .dim { color: var(--night-muted); }
+.terminal-log a { color: var(--phosphor-ice); }
+.terminal-log ul { margin: 0 0 12px; padding: 0; list-style: none; }
+.terminal-form { display: flex; align-items: center; gap: 10px; padding: 10px 20px 14px; border-top: 1px solid rgba(245, 245, 220, 0.12); }
+.terminal-form[hidden] { display: none; }
+.terminal-prompt { color: var(--night-muted); }
+.terminal-form input {
+  flex: 1; min-width: 0; border: 0; padding: 4px 0; background: transparent; color: var(--intake-cream);
+  font: inherit; caret-color: var(--phosphor-ice); outline: none;
+}
+.terminal-form input::placeholder { color: rgba(185, 201, 224, 0.75); }
+.terminal-form:focus-within { box-shadow: inset 0 2px 0 var(--ice-blue); }
+
 /* Records ledger */
 .records { padding-block: var(--section-padding); }
 .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--spacing-md); flex-wrap: wrap; }
@@ -450,11 +491,33 @@ html.boot.boot-out .boot-screen { opacity: 0; visibility: hidden; }
 <main id="main">
   <section class="identity" data-section="identity" data-intent="introduce" data-layout="intake-form" data-items="2" aria-labelledby="subject-name">
     <div class="wrap">
-      <h1 id="subject-name" class="name striped">
-        <span class="name-line">Khalil<span class="name-bar" aria-hidden="true"></span></span>
-        <span class="name-line">Manns<span class="name-bar" aria-hidden="true"></span></span>
-      </h1>
-      <p class="designation">Homepage of the Manns himself</p>
+      <div class="identity-head">
+        <div class="identity-title">
+          <h1 id="subject-name" class="name striped">
+            <span class="name-line">Khalil<span class="name-bar" aria-hidden="true"></span></span>
+            <span class="name-line">Manns<span class="name-bar" aria-hidden="true"></span></span>
+          </h1>
+          <p class="designation">Homepage of the Manns himself</p>
+        </div>
+
+        <aside class="terminal" data-section="terminal" data-intent="explore" data-layout="console" aria-labelledby="terminal-title">
+          <div class="terminal-bar">
+            <h2 id="terminal-title" class="terminal-name">Manns Systems · Terminal</h2>
+            <span class="terminal-mode"><span class="terminal-led" aria-hidden="true"></span>Local mode</span>
+          </div>
+          <div class="terminal-log" role="log" aria-live="polite" aria-label="Terminal output" tabindex="0">
+            <p class="cmd">whoami</p>
+            <p class="out">Khalil Manns. The Manns with the Plan: Girl Dad, Tech, Retro Tech, Content &amp; Commerce, political hobbyist.</p>
+            <p class="cmd">latest</p>
+            <p class="out"><span class="dim">No. 006 · 2025-03-08</span> <a href="https://www.khalilmanns.com/posts/mar8-25/mar8-25/">March Update and To-Do</a></p>
+          </div>
+          <form class="terminal-form" hidden>
+            <label for="terminal-input" class="terminal-prompt">&gt;</label>
+            <input id="terminal-input" name="command" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help" aria-describedby="terminal-hint">
+            <span id="terminal-hint" class="visually-hidden">Commands: help, whoami, latest, posts, micros, contact, version, clear</span>
+          </form>
+        </aside>
+      </div>
 
       <div class="intake">
         <figure class="subject-card">
@@ -633,6 +696,76 @@ html.boot.boot-out .boot-screen { opacity: 0; visibility: hidden; }
       d.dataset.theme = isDark() ? 'light' : 'dark'; label();
       try { localStorage.setItem('mns-theme', d.dataset.theme); } catch (e) {}
     });
+  })();
+  // Manns Systems terminal. Answers come from site content only, through respond().
+  // To wire a backend later, replace respond() with an async call that returns the same shape.
+  (function () {
+    var root = document.querySelector('.terminal'); if (!root) return;
+    var log = root.querySelector('.terminal-log'), form = root.querySelector('.terminal-form'),
+        input = form.querySelector('input'), history = [], at = 0;
+    var BASE = 'https://www.khalilmanns.com';
+    var SITE = {
+      who: 'Khalil Manns. The Manns with the Plan: Girl Dad, Tech, Retro Tech, Content & Commerce, political hobbyist.',
+      version: 'Manns Systems version 2.023.9',
+      posts: [
+        ['006', '2025-03-08', 'March Update and To-Do', '/posts/mar8-25/mar8-25/'],
+        ['005', '2025-01-30', 'Inching Toward Launch', '/posts/feb1-25/feb1-25/'],
+        ['004', '2025-01-15', 'This is a Jan Test', '/posts/test/'],
+        ['003', '2024-12-19', 'OK, This is the start', '/posts/start/'],
+        ['002', '2024-05-01', 'Markdown Extended Features', '/posts/markdown-extended/'],
+        ['001', '2024-04-01', 'Simple Guides for Fuwari', '/posts/guide/']
+      ],
+      micros: [
+        ['2024-05-20', 'Just discovered this amazing CSS trick for smooth animations. Sometimes the simplest solutions are the most elegant.'],
+        ['2024-05-18', 'Coffee shop coding session is hitting different today. There\u2019s something about the ambient noise that just clicks.'],
+        ['2024-05-15', 'Reminder: document your code like you\u2019re writing for your future self who has no memory of why you made these decisions.']
+      ],
+      contact: [['Bluesky', 'https://bsky.app/profile/kmanns.bsky.social'], ['GitHub', 'https://github.com/kmanns'], ['LinkedIn', 'https://www.linkedin.com/in/khalilmanns/']]
+    };
+    // A reply is a list of lines; each line is text or { text, href, dim }.
+    function respond(cmd) {
+      var post = function (r) { return [{ text: 'No. ' + r[0] + ' \u00b7 ' + r[1] + ' ', dim: true }, { text: r[2], href: BASE + r[3] }]; };
+      switch (cmd) {
+        case 'help': return [['Commands: help, whoami, latest, posts, micros, contact, version, clear']];
+        case 'whoami': return [[SITE.who]];
+        case 'latest': return [post(SITE.posts[0])];
+        case 'posts': return SITE.posts.map(post);
+        case 'micros': return SITE.micros.map(function (m) { return [{ text: m[0] + ' ', dim: true }, m[1]]; });
+        case 'contact': return [SITE.contact.reduce(function (acc, c, i) {
+          if (i) acc.push({ text: ' \u00b7 ', dim: true });
+          acc.push({ text: c[0], href: c[1] }); return acc;
+        }, [])];
+        case 'version': return [[SITE.version]];
+        case '': return [];
+        default: return [['Command not found: ' + cmd + '. Type help.']];
+      }
+    }
+    function line(cls, parts) {
+      var p = document.createElement('p'); p.className = cls;
+      parts.forEach(function (part) {
+        if (typeof part === 'string') { p.appendChild(document.createTextNode(part)); return; }
+        var el = document.createElement(part.href ? 'a' : 'span');
+        if (part.href) el.href = part.href;
+        if (part.dim) el.className = 'dim';
+        el.textContent = part.text; p.appendChild(el);
+      });
+      log.appendChild(p);
+    }
+    form.hidden = false;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var cmd = input.value.trim().toLowerCase(); input.value = '';
+      if (cmd) { history.push(cmd); at = history.length; }
+      if (cmd === 'clear') { log.textContent = ''; return; }
+      line('cmd', [cmd]);
+      respond(cmd).forEach(function (parts, i, all) { line(i === all.length - 1 ? 'out' : 'out out-cont', parts); });
+      log.scrollTop = log.scrollHeight;
+    });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowUp' && at > 0) { at--; input.value = history[at]; e.preventDefault(); }
+      else if (e.key === 'ArrowDown' && at < history.length) { at++; input.value = history[at] || ''; e.preventDefault(); }
+    });
+    root.addEventListener('pointerdown', function (e) { if (!e.target.closest('a')) setTimeout(function () { input.focus(); }, 0); });
   })();
   // Boot screen: a timed 0-100% count, at most 1.6s, then a 300ms fade. Any input skips it.
   (function () {

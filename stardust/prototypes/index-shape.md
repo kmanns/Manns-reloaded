@@ -106,6 +106,15 @@ dominantDimension: composition/subject-id-card
    (Girl Dad · Tech · Retro Tech · Content & Commerce · Political
    hobbyist), contact row Bluesky / GitHub / LinkedIn. A short bio slot is a
    visible placeholder for the owner to write.
+   **Revision 2026-10-23 (owner):** on desktop (≥ 1100px) the run-on bars
+   are removed ("they hurt my eyes"); the striped letters stay. Beside the
+   name and subtitle sits a **Manns Systems terminal**: navy panel, header
+   strip "MANNS SYSTEMS · TERMINAL · LOCAL MODE", a pre-filled transcript
+   (`whoami`, `latest`) and a working prompt. Commands answer from captured
+   content only (help, whoami, latest, posts, micros, contact, version,
+   clear) through one `respond()` function that a backend can replace later.
+   No JS: static transcript, input hidden. Below 1100px the terminal is not
+   shown and the bars stay (owner likes the mobile view).
 3. **records** — eyebrow TRIAL LOG, H2 "Latest posts". Ledger of the six
    published posts, newest first. Each row: navy subject badge
    (`No. 006`, `2025-03-08`), serif title linking to the post, the post's
@@ -150,7 +159,8 @@ dominantDimension: composition/subject-id-card
 - `div[data-section="boot-screen"][data-intent="brand-moment"][data-layout="overlay"]`
 
 - `header[data-section="header"][data-intent="navigate"][data-layout="bar"]`
-- `section[data-section="identity"][data-intent="introduce"][data-layout="split-7-5"][data-items="2"]`
+- `section[data-section="identity"][data-intent="introduce"][data-layout="intake-form"][data-items="2"]`
+- `aside[data-section="terminal"][data-intent="explore"][data-layout="console"]` (inside identity, desktop only)
 - `section[data-section="records"][data-intent="browse"][data-layout="ledger"][data-items="6"]`
 - `section[data-section="transmissions"][data-intent="browse"][data-layout="teletype"][data-items="3"]`
 - `footer[data-section="footer"][data-intent="navigate"][data-layout="bar"]`
