@@ -1,0 +1,6 @@
+{"ts":"2026-10-23T02:11:48Z","skill":"stardust:extract","phase":"crawl","event":"start"}
+{"ts":"2026-10-23T02:11:58Z","skill":"stardust:extract","phase":"per-page-extraction","event":"start"}
+{"ts":"2026-10-23T02:12:24Z","skill":"stardust:extract","phase":"per-page-extraction","event":"end","detail":"8/8 captured headless"}
+{"ts":"2026-10-23T02:14:30Z","skill":"stardust:extract","phase":"brand-surface-extraction","event":"end"}
+{"ts":"2026-10-23T02:14:30Z","skill":"stardust:extract","phase":"seed","event":"end"}
+{"ts":"2026-10-23T02:16:34Z","skill":"stardust:extract","phase":"state-and-report","event":"end","detail":"8/8 live, vision 8 ok"}

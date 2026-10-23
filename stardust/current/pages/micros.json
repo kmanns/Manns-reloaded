@@ -1,0 +1,96 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-10-23T02:12:11.751Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "micros",
+  "url": "https://www.khalilmanns.com/micros/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-10-23T02:12:11.751Z",
+  "finalUrl": "https://www.khalilmanns.com/micros/",
+  "title": "Micro Posts - Khalil Manns",
+  "description": "Micro Posts - Khalil Manns",
+  "og": {
+    "title": "Micro Posts - Khalil Manns",
+    "description": "Micro Posts - Khalil Manns",
+    "image": null,
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Anti-Social Media"
+    }
+  ],
+  "body": [
+    "Quick thoughts, observations, and snippets from daily life.",
+    "Just discovered this amazing CSS trick for smooth animations. Sometimes the simplest solutions are the most elegant.",
+    "Coffee shop coding session is hitting different today. There’s something about the ambient noise that just clicks.",
+    "Reminder: document your code like you’re writing for your future self who has no memory of why you made these decisions."
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Khalil Manns",
+      "href": "/"
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Archive",
+      "href": "/archive/"
+    },
+    {
+      "label": "Micros",
+      "href": "/micros"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Github",
+      "href": "https://github.com/kmanns"
+    }
+  ],
+  "links": [
+    "https://www.khalilmanns.com/",
+    "https://www.khalilmanns.com/archive/",
+    "https://www.khalilmanns.com/micros",
+    "https://www.khalilmanns.com/about",
+    "https://github.com/kmanns"
+  ],
+  "media": {
+    "imgs": [],
+    "allImgCount": 0,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--bannerOffset": "15vh",
+    "--banner-height-home": "65vh",
+    "--banner-height": "35vh",
+    "--configHue": "250",
+    "--page-width": "75rem",
+    "--hue": "250",
+    "--banner-height-extend": "268px"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 1,
+    "mainTextLen": 525,
+    "realImageCount": 0,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "screenshot": "assets/screenshots/micros.png",
+  "renderedHtml": "pages/micros.html"
+}

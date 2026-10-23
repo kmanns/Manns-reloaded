@@ -1,0 +1,165 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-10-23T02:13:45Z",
+    "stardustVersion": "0.34.1"
+  },
+  "site": {
+    "originUrl": "https://www.khalilmanns.com",
+    "deployUrl": null,
+    "extractedAt": "2026-10-23T02:13:45Z",
+    "pageCap": 8,
+    "totalDiscovered": 23,
+    "crawled": 8
+  },
+  "direction": null,
+  "flow": "redesign",
+  "flowChosenAt": "2026-10-23T02:13:45Z",
+  "flowSource": "user-phrase",
+  "pages": [
+    {
+      "slug": "index",
+      "url": "https://www.khalilmanns.com/",
+      "title": "Khalil Manns - Homepage of the Manns himself",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:12.439Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/index.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "about",
+      "url": "https://www.khalilmanns.com/about/",
+      "title": "About - Khalil Manns",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:12.041Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/about.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "micros",
+      "url": "https://www.khalilmanns.com/micros/",
+      "title": "Micro Posts - Khalil Manns",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:11.751Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/micros.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "archive",
+      "url": "https://www.khalilmanns.com/archive/",
+      "title": "Archive - Khalil Manns",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:12.987Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/archive.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "archive-category-blogging",
+      "url": "https://www.khalilmanns.com/archive/category/Blogging/",
+      "title": "Archive - Khalil Manns",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:19.919Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/archive-category-blogging.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "posts-mar8-25-mar8-25",
+      "url": "https://www.khalilmanns.com/posts/mar8-25/mar8-25/",
+      "title": "March Update and To-Do - Khalil Manns",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:18.846Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/posts-mar8-25-mar8-25.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "posts-feb1-25-feb1-25",
+      "url": "https://www.khalilmanns.com/posts/feb1-25/feb1-25/",
+      "title": "Inching Toward Launch - Khalil Manns",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:18.629Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/posts-feb1-25-feb1-25.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "posts-guide",
+      "url": "https://www.khalilmanns.com/posts/guide/",
+      "title": "Simple Guides for Fuwari - Khalil Manns",
+      "type": null,
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:19.555Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/posts-guide.json",
+      "prototypePath": null,
+      "migratedPath": null
+    }
+  ]
+}

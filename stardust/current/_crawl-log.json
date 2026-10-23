@@ -1,0 +1,64 @@
+{
+  "discovery": {
+    "fetchTechnique": "headless",
+    "count": 8,
+    "concurrency": 4
+  },
+  "consent": {
+    "method": "auto"
+  },
+  "favicon": {
+    "url": "https://www.khalilmanns.com/favicon/favicon-light-32.png",
+    "file": "assets/favicon.png"
+  },
+  "crawl": {
+    "failures": []
+  },
+  "captureGaps": {
+    "roots": [],
+    "detail": "uncaptured first-level targets: none (no locale root captured)"
+  },
+  "visionCheck": [
+    {
+      "slug": "index",
+      "verdict": "ok",
+      "notes": "banner, nav, sidebar and 6 post cards render; palette matches"
+    },
+    {
+      "slug": "about",
+      "verdict": "ok",
+      "notes": "about card, repo card, note admonition render"
+    },
+    {
+      "slug": "micros",
+      "verdict": "ok",
+      "notes": "renders; separate dark layout without banner (real, not a capture failure)"
+    },
+    {
+      "slug": "posts-mar8-25-mar8-25",
+      "verdict": "ok",
+      "notes": "post body and license block render"
+    },
+    {
+      "slug": "archive",
+      "verdict": "ok",
+      "notes": "archive list renders"
+    },
+    {
+      "slug": "archive-category-blogging",
+      "verdict": "ok",
+      "notes": "filtered archive renders"
+    },
+    {
+      "slug": "posts-feb1-25-feb1-25",
+      "verdict": "ok",
+      "notes": "post with cover image renders"
+    },
+    {
+      "slug": "posts-guide",
+      "verdict": "ok",
+      "notes": "theme demo post renders"
+    }
+  ],
+  "siblingCandidates": []
+}

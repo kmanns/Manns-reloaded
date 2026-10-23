@@ -1,0 +1,334 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-10-23T02:12:12.041Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "about",
+  "url": "https://www.khalilmanns.com/about/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-10-23T02:12:12.041Z",
+  "finalUrl": "https://www.khalilmanns.com/about/",
+  "title": "About - Khalil Manns",
+  "description": "About",
+  "og": {
+    "title": "About - Khalil Manns",
+    "description": "About",
+    "image": null,
+    "type": "website"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "About#"
+    },
+    {
+      "tag": "h3",
+      "text": "Sources of images used in this site#"
+    }
+  ],
+  "body": [
+    "This is the home base for Khalil Manns.",
+    "NOTEThis site is still a work in progress!",
+    "This site is still a work in progress!",
+    "Sources of images used in this site#Unsplash星と少女 by StellaRabbit - v1.4 Showcase by Rabbit_YourMajesty",
+    "Unsplash",
+    "星と少女 by Stella",
+    "Rabbit - v1.4 Showcase by Rabbit_YourMajesty"
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Khalil Manns",
+      "href": "/"
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Micros",
+      "href": "/micros/"
+    },
+    {
+      "label": "Archive",
+      "href": "/archive/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/saicaca/fuwari"
+    },
+    {
+      "label": "Light",
+      "href": null
+    },
+    {
+      "label": "Dark",
+      "href": null
+    },
+    {
+      "label": "System",
+      "href": null
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Micros",
+      "href": "/micros/"
+    },
+    {
+      "label": "Archive",
+      "href": "/archive/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/saicaca/fuwari"
+    },
+    {
+      "label": "Blogging2",
+      "href": "/archive/category/Blogging/"
+    },
+    {
+      "label": "Blogging2",
+      "href": null
+    },
+    {
+      "label": "Examples1",
+      "href": "/archive/category/Examples/"
+    },
+    {
+      "label": "Examples1",
+      "href": null
+    },
+    {
+      "label": "Guides1",
+      "href": "/archive/category/Guides/"
+    },
+    {
+      "label": "Guides1",
+      "href": null
+    },
+    {
+      "label": "mannstech2",
+      "href": "/archive/category/mannstech/"
+    },
+    {
+      "label": "mannstech2",
+      "href": null
+    },
+    {
+      "label": "Blogging",
+      "href": "/archive/tag/Blogging/"
+    },
+    {
+      "label": "Customization",
+      "href": "/archive/tag/Customization/"
+    },
+    {
+      "label": "Demo",
+      "href": "/archive/tag/Demo/"
+    },
+    {
+      "label": "Example",
+      "href": "/archive/tag/Example/"
+    },
+    {
+      "label": "Fuwari",
+      "href": "/archive/tag/Fuwari/"
+    },
+    {
+      "label": "Markdown",
+      "href": "/archive/tag/Markdown/"
+    },
+    {
+      "label": "rss",
+      "href": "/archive/tag/rss/"
+    },
+    {
+      "label": "Start",
+      "href": "/archive/tag/Start/"
+    },
+    {
+      "label": "kmanns/Manns-reloadedReplatform project for khalilmanns.com00MITAstrofetch(\"https://api.github.com/repos/kmanns/Manns-reloaded\",{referrerPolicy:\"no-referrer\"}).then((e=>e.json())).then((e=>{e.description?document.getElementById(\"GCj2o29n-description\").innerText=e.description.replace(/:[a-zA-Z0-9_]+:/g,\"\"):document.getElementById(\"GCj2o29n-description\").innerText=\"Description not set\",document.getElementById(\"GCj2o29n-language\").innerText=e.language,document.getElementById(\"GCj2o29n-forks\").innerText=Intl.NumberFormat(\"en-us\",{notation:\"compact\",maximumFractionDigits:1}).format(e.forks).replaceAll(\" \",\"\"),document.getElementById(\"GCj2o29n-stars\").innerText=Intl.NumberFormat(\"en-us\",{notation:\"compact\",maximumFractionDigits:1}).format(e.stargazers_count).replaceAll(\" \",\"\");const n=document.getElementById(\"GCj2o29n-avatar\");n.style.backgroundImage=\"url(\"+e.owner.avatar_url+\")\",n.style.backgroundColor=\"transparent\",e.license?.spdx_id?document.getElementById(\"GCj2o29n-license\").innerText=e.license?.spdx_id:document.getElementById(\"GCj2o29n-license\").innerText=\"no-license\",document.getElementById(\"GCj2o29n-card\").classList.remove(\"fetch-waiting\"),console.log(\"[GITHUB-CARD] Loaded card for kmanns/Manns-reloaded | GCj2o29n.\")})).catch((e=>{document.getElementById(\"GCj2o29n-card\").classList.add(\"fetch-error\"),console.warn(\"[GITHUB-CARD] (Error) Loading card for kmanns/Manns-reloaded | GCj2o29n.\")}))",
+      "href": "https://github.com/kmanns/Manns-reloaded"
+    },
+    {
+      "label": "Unsplash",
+      "href": "https://unsplash.com/"
+    },
+    {
+      "label": "星と少女",
+      "href": "https://www.pixiv.net/artworks/108916539"
+    },
+    {
+      "label": "Stella",
+      "href": "https://www.pixiv.net/users/93273965"
+    },
+    {
+      "label": "Rabbit - v1.4 Showcase",
+      "href": "https://civitai.com/posts/586908"
+    },
+    {
+      "label": "Rabbit_YourMajesty",
+      "href": "https://civitai.com/user/Rabbit_YourMajesty"
+    },
+    {
+      "label": "RSS",
+      "href": "/rss.xml"
+    },
+    {
+      "label": "Sitemap",
+      "href": "/sitemap-index.xml"
+    },
+    {
+      "label": "Astro",
+      "href": "https://astro.build"
+    },
+    {
+      "label": "Fuwari",
+      "href": "https://github.com/saicaca/fuwari"
+    }
+  ],
+  "links": [
+    "https://www.khalilmanns.com/",
+    "https://www.khalilmanns.com/micros/",
+    "https://www.khalilmanns.com/archive/",
+    "https://www.khalilmanns.com/about/",
+    "https://github.com/saicaca/fuwari",
+    "https://bsky.app/profile/kmanns.bsky.social",
+    "https://github.com/kmanns",
+    "https://www.linkedin.com/in/khalilmanns/",
+    "https://www.khalilmanns.com/archive/category/Blogging/",
+    "https://www.khalilmanns.com/archive/category/Examples/",
+    "https://www.khalilmanns.com/archive/category/Guides/",
+    "https://www.khalilmanns.com/archive/category/mannstech/",
+    "https://www.khalilmanns.com/archive/tag/Blogging/",
+    "https://www.khalilmanns.com/archive/tag/Customization/",
+    "https://www.khalilmanns.com/archive/tag/Demo/",
+    "https://www.khalilmanns.com/archive/tag/Example/",
+    "https://www.khalilmanns.com/archive/tag/Fuwari/",
+    "https://www.khalilmanns.com/archive/tag/Markdown/",
+    "https://www.khalilmanns.com/archive/tag/rss/",
+    "https://www.khalilmanns.com/archive/tag/Start/",
+    "https://www.khalilmanns.com/about/#about",
+    "https://github.com/kmanns/Manns-reloaded",
+    "https://www.khalilmanns.com/about/#sources-of-images-used-in-this-site",
+    "https://unsplash.com/",
+    "https://www.pixiv.net/artworks/108916539",
+    "https://www.pixiv.net/users/93273965",
+    "https://civitai.com/posts/586908",
+    "https://civitai.com/user/Rabbit_YourMajesty",
+    "https://www.khalilmanns.com/rss.xml",
+    "https://www.khalilmanns.com/sitemap-index.xml",
+    "https://astro.build/"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://www.khalilmanns.com/_astro/demo-banner.ify5GzDa_t0lHO.webp",
+        "alt": "Banner image of the blog",
+        "w": 3024,
+        "h": 1964
+      },
+      {
+        "src": "https://www.khalilmanns.com/_astro/demo-avatar.DHOxz12C_Z1u4LLb.webp",
+        "alt": "Profile Image of the Author",
+        "w": 2048,
+        "h": 2048
+      }
+    ],
+    "allImgCount": 2,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--tw-translate-y": "0",
+    "--radius-large": "1rem",
+    "--content-delay": ".15s",
+    "--primary": "oklch(.7 .14 250)",
+    "--page-bg": "oklch(.95 .01 250)",
+    "--card-bg": "white",
+    "--btn-content": "oklch(.55 .12 250)",
+    "--btn-regular-bg": "oklch(.95 .025 250)",
+    "--btn-regular-bg-hover": "oklch(.9 .05 250)",
+    "--btn-regular-bg-active": "oklch(.85 .08 250)",
+    "--btn-plain-bg-hover": "oklch(.95 .025 250)",
+    "--btn-plain-bg-active": "oklch(.98 .01 250)",
+    "--btn-card-bg-hover": "oklch(.98 .005 250)",
+    "--btn-card-bg-active": "oklch(.9 .03 250)",
+    "--enter-btn-bg": "oklch(.95 .025 250)",
+    "--enter-btn-bg-hover": "oklch(.9 .05 250)",
+    "--enter-btn-bg-active": "oklch(.85 .08 250)",
+    "--deep-text": "oklch(.25 .02 250)",
+    "--title-active": "oklch(.6 .1 250)",
+    "--line-divider": "rgba(0,0,0,.08)",
+    "--line-color": "rgba(0,0,0,.1)",
+    "--meta-divider": "rgba(0,0,0,.2)",
+    "--inline-code-bg": "oklch(.95 .025 250)",
+    "--inline-code-color": "oklch(.55 .12 250)",
+    "--selection-bg": "oklch(.9 .05 250)",
+    "--codeblock-selection": "oklch(.4 .08 250)",
+    "--codeblock-bg": "oklch(.2 .015 250)",
+    "--license-block-bg": "rgba(0,0,0,.03)",
+    "--link-underline": "oklch(.93 .04 250)",
+    "--link-hover": "oklch(.95 .025 250)",
+    "--link-active": "oklch(.9 .05 250)",
+    "--float-panel-bg": "white",
+    "--scrollbar-bg-light": "rgba(0,0,0,.4)",
+    "--scrollbar-bg-hover-light": "rgba(0,0,0,.5)",
+    "--scrollbar-bg-active-light": "rgba(0,0,0,.6)",
+    "--scrollbar-bg-dark": "rgba(255,255,255,.4)",
+    "--scrollbar-bg-hover-dark": "rgba(255,255,255,.5)",
+    "--scrollbar-bg-active-dark": "rgba(255,255,255,.6)",
+    "--scrollbar-bg": "rgba(0,0,0,.4)",
+    "--scrollbar-bg-hover": "rgba(0,0,0,.5)",
+    "--scrollbar-bg-active": "rgba(0,0,0,.6)",
+    "--color-selection-bar": "linear-gradient(to right, oklch(.8 .1 0), oklch(.8 .1 30), oklch(.8 .1 60), oklch(.8 .1 90), oklch(.8 .1 120), oklch(.8 .1 150), oklch(.8 .1 180), oklch(.8 .1 210), oklch(.8 .1 240), oklch(.8 .1 270), oklch(.8 .1 300), oklch(.8 .1 330), oklch(.8 .1 360))",
+    "--display-light-icon": "1",
+    "--display-dark-icon": "0",
+    "--admonitions-color-tip": "oklch(.7 .14 180)",
+    "--admonitions-color-note": "oklch(.7 .14 250)",
+    "--admonitions-color-important": "oklch(.7 .14 310)",
+    "--admonitions-color-warning": "oklch(.7 .14 60)",
+    "--admonitions-color-caution": "oklch(.6 .2 25)",
+    "--toc-badge-bg": "oklch(.9 .045 250)",
+    "--toc-btn-hover": "oklch(.92 .015 250)",
+    "--toc-btn-active": "oklch(.9 .015 250)",
+    "--toc-width": "calc((100vw - 75rem) / 2 - 1rem)",
+    "--toc-item-active": "oklch(.7 .13 250)",
+    "--x": "0",
+    "--y": "0",
+    "--bannerOffset": "15vh",
+    "--banner-height-home": "65vh",
+    "--banner-height": "35vh",
+    "--configHue": "250",
+    "--page-width": "75rem",
+    "--hue": "250",
+    "--banner-height-extend": "268px"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 2,
+    "mainTextLen": 3818,
+    "realImageCount": 2,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "screenshot": "assets/screenshots/about.png",
+  "renderedHtml": "pages/about.html"
+}
