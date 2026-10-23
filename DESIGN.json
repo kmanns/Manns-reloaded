@@ -48,9 +48,9 @@
           "ratio": 14.95
         },
         {
-          "fg": "#C8C8B0",
+          "fg": "#B9C9E0",
           "bg": "#001E44",
-          "ratio": 9.73
+          "ratio": 9.84
         },
         {
           "fg": "#98C7FF",
@@ -171,6 +171,12 @@
       "subject-file": {
         "purpose": "post header: title, badge row (ordinal, date, category), tags",
         "constraint": "real values only"
+      },
+      "boot-screen": {
+        "purpose": "first-visit brand moment: Manns Systems lockup, version label, 0-100% timed counter",
+        "position": "full-viewport overlay, first visit only",
+        "constraint": "\u22641.6s + 300ms fade; skippable; never shown without JS, with reduced motion, or without readable localStorage; aria-hidden; version string owner-supplied",
+        "source": "owner request 2026-10-23"
       }
     },
     "iaPriorities": [
@@ -198,7 +204,7 @@
     ],
     "voice": {
       "do": [
-        "Corporate form labels as eyebrows: 'Subject file', 'Intake', 'Trial log', 'Records'",
+        "Corporate form language as field and column labels only (NAME, OCCUPATIONS, No., Filed, Department); no eyebrows above headings",
         "Plain nav labels: Home, Posts, Micros, Archive, About",
         "Keep the owner's casual voice in all body copy"
       ],

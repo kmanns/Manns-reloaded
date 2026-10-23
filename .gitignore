@@ -30,3 +30,6 @@ yarn.lock
 .env
 .env.*
 # <<< stardust
+
+# impeccable scratch captures
+.impeccable/review/

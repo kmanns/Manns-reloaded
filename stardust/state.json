@@ -1,7 +1,7 @@
 {
   "_provenance": {
-    "writtenBy": "stardust:direct",
-    "writtenAt": "2026-10-23T02:19:59Z",
+    "writtenBy": "stardust:prototype",
+    "writtenAt": "2026-10-23T02:36:38Z",
     "stardustVersion": "0.34.1"
   },
   "site": {
@@ -27,7 +27,7 @@
       "url": "https://www.khalilmanns.com/",
       "title": "Khalil Manns - Homepage of the Manns himself",
       "type": null,
-      "status": "directed",
+      "status": "prototyped",
       "history": [
         {
           "status": "extracted",
@@ -36,12 +36,16 @@
         {
           "status": "directed",
           "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-23T02:36:38Z"
         }
       ],
       "stale": false,
       "staleReason": null,
       "currentStatePath": "stardust/current/pages/index.json",
-      "prototypePath": null,
+      "prototypePath": "stardust/prototypes/index-proposed.html",
       "migratedPath": null
     },
     {

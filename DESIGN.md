@@ -11,7 +11,7 @@ colors:
   ice-blue: "#6B9BD1"
   phosphor-ice: "#98C7FF"
   night-panel: "#0A2C5A"
-  night-muted: "#C8C8B0"
+  night-muted: "#B9C9E0"
   rule-light: "rgba(0, 30, 68, 0.14)"
   rule-dark: "rgba(245, 245, 220, 0.16)"
 typography:
@@ -133,7 +133,8 @@ badges and labels. Inside a post the page turns into calm editorial reading.
   highlights, focus rings) because it is 2.6:1 on cream. In dark mode it is
   usable as text (5.7:1).
 - **Night Panel** `#0A2C5A`, **Phosphor Ice** `#98C7FF` (dark-mode links,
-  9.4:1), **Night Muted** `#C8C8B0`.
+  9.4:1), **Night Muted** `#B9C9E0` (navy-tinted secondary text, 9.8:1;
+  replaced the grey `#C8C8B0` after the detector flagged grey-on-navy).
 
 No other hues. The site never uses neon, gradients-as-decoration or
 synthwave pink and purple.
@@ -178,8 +179,16 @@ signature, applied to cards and the masthead only.
   letters stay real text for assistive tech.
 - **Subject badge:** navy tag with label-caps text, e.g. a post's ordinal
   and date, derived only from real content order and dates.
-- **Form label:** small label-caps eyebrow in the voice of a corporate form
-  (section names, field names), above plain-language headings.
+- **Form field label:** label-caps text used only as a field or column
+  label (NAME, OCCUPATIONS, No., Filed). Never as an eyebrow above a
+  heading: headings carry plain language on their own.
+- **Intake form:** 2px navy top rule, rows split by 1px rules, a label column
+  and a value column; collapses to stacked rows under 640px.
+- **Records ledger:** numbered rows (No., Filed, Record, Department) with a
+  2px ice-blue rule that draws across the row top on hover.
+- **Boot screen:** first visit only; navy field, striped MANNS lockup,
+  version label, striped progress fill and a mono percentage; ≤ 1.6s, skippable,
+  never shown without JS or with reduced motion.
 - **Post card:** backlit panel, serif title, badge row, excerpt; hover draws
   a 2px ice-blue rule along the top edge.
 - **Buttons:** navy solid primary; outlined secondary that fills cream on
@@ -190,7 +199,7 @@ signature, applied to cards and the masthead only.
 
 ## Do's and Don'ts
 
-- **Do** keep the company fiction in labels, marks and badges; keep the
+- **Do** keep the company fiction in field labels, marks and badges; keep the
   owner's prose untouched.
 - **Do** give every number on the page a real source (post order, dates,
   counts from the content collections).

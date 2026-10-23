@@ -53,3 +53,31 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** $stardust prototype index
 
 ---
+
+## 2026-10-23T04:00:00Z — prototype — home page prototyped (Manns Systems intake form)
+
+**Prompt:** Owner added a first-visit loading screen (Manns Systems logo, 0–100%, a couple of seconds, "Version 2.023.9"); home prototype built.
+
+**Decisions:**
+- First viewport is an intake form (not a split hero): striped KHALIL / MANNS with run-on bars, avatar ID card, ruled fields, "Read the latest post" as the primary action.
+- Boot screen: timed 1.6s count + 300ms fade, first visit only, skippable, gated on JS, localStorage and reduced motion.
+- Dropped eyebrows above headings (impeccable floor); corporate labels live in field and column labels only. DESIGN.md updated.
+- Dark muted text moved from #C8C8B0 to #B9C9E0 after the detector flagged grey-on-navy.
+
+**Artifacts touched:**
+- stardust/prototypes/index-shape.md — updated (boot screen)
+- stardust/prototypes/index-proposed.html, stardust/prototypes/assets/avatar-480.webp — created
+- .impeccable/surfaces/stardust-prototypes-index-proposed-html.md — created (direction contract)
+- DESIGN.md, DESIGN.json — updated
+- stardust/state.json — index → prototyped
+
+**Findings worth flagging:**
+- Impeccable's finish reviewer ran in-thread (no reviewer subagent type in this harness).
+
+**Open questions:**
+- Bio text for the Statement field.
+- "Manns Systems" name and the demo posts.
+
+**Next:** owner review; "approve index", then prototype the post page.
+
+---
