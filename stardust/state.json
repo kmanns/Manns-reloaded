@@ -1,7 +1,7 @@
 {
   "_provenance": {
     "writtenBy": "stardust:prototype",
-    "writtenAt": "2026-10-23T17:49:37Z",
+    "writtenAt": "2026-10-24T17:10:27Z",
     "stardustVersion": "0.34.1"
   },
   "site": {
@@ -145,7 +145,7 @@
       "url": "https://www.khalilmanns.com/posts/mar8-25/mar8-25/",
       "title": "March Update and To-Do - Khalil Manns",
       "type": null,
-      "status": "prototyped",
+      "status": "approved",
       "history": [
         {
           "status": "extracted",
@@ -158,6 +158,10 @@
         {
           "status": "prototyped",
           "at": "2026-10-23T17:49:37Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T17:10:27Z"
         }
       ],
       "stale": false,
@@ -193,7 +197,7 @@
       "url": "https://www.khalilmanns.com/posts/guide/",
       "title": "Simple Guides for Fuwari - Khalil Manns",
       "type": null,
-      "status": "prototyped",
+      "status": "approved",
       "history": [
         {
           "status": "extracted",
@@ -206,6 +210,10 @@
         {
           "status": "prototyped",
           "at": "2026-10-23T17:49:37Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T17:10:27Z"
         }
       ],
       "stale": false,

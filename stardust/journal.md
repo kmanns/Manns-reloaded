@@ -139,3 +139,22 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner review; "approve post", then micros + about/archive.
 
 ---
+
+## 2026-10-24T00:10:00Z — prototype — post approved; briefs for micros, archive, about
+
+**Prompt:** Owner: "approve post".
+
+**Decisions:**
+- posts-mar8-25-mar8-25 and posts-guide → approved (same archetype).
+- Briefs: micros as a teletype log under a navy masthead; archive as a records register by year with department and tag filter rows (category page = filtered state); about as subject-file rows reusing the home intake form.
+
+**Artifacts touched:**
+- stardust/prototypes/micros-shape.md, archive-shape.md, about-shape.md — created
+- stardust/state.json — updated
+
+**Open questions:**
+- Bio; "Manns Systems" name; demo posts.
+
+**Next:** owner confirms the three briefs, then render.
+
+---
