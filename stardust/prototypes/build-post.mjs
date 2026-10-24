@@ -208,3 +208,6 @@ render({ slug: 'posts-mar8-25-mar8-25', file: 'src/content/posts/mar8-25/mar8-25
 render({ slug: 'posts-guide', file: 'src/content/posts/guide/index.md', words: 160,
   cover: { src: 'assets/guide-cover.webp', w: 1360, h: 680, alt: 'Illustrated cover image for the Fuwari guide post' },
   provenance: prov('posts-guide', BASE + '/posts/guide/', 'src/content/posts/guide/index.md (stress-test render of the post archetype)') });
+render({ slug: 'posts-feb1-25-feb1-25', file: 'src/content/posts/feb1-25/feb1-25.md', words: 30,
+  cover: { src: 'assets/feb1-25-cover.webp', w: 1024, h: 768, alt: 'Cover image for Inching Toward Launch' },
+  provenance: prov('posts-feb1-25-feb1-25', BASE + '/posts/feb1-25/feb1-25/', 'src/content/posts/feb1-25/feb1-25.md') });

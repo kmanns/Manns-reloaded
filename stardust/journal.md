@@ -158,3 +158,26 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner confirms the three briefs, then render.
 
 ---
+
+## 2026-10-24T00:40:00Z — prototype — micros, archive (+ category), about prototyped; feb1-25 rendered
+
+**Prompt:** Owner said "go" on the three briefs.
+
+**Decisions:**
+- stardust/prototypes/build-pages.mjs renders micros, archive, archive-category-blogging and about from the approved home canon.
+- Micros joins the shared layout (navy masthead band, teletype rows, progressive tag filter).
+- Archive is a records register by year with Department/Tags filter rows; the category page is the filtered state.
+- About reuses the intake form and ID card; same bio placeholder as home.
+- posts-feb1-25-feb1-25 rendered with the approved post template.
+- Credits heading raised to 20px after the detector flagged a flat step.
+
+**Artifacts touched:**
+- stardust/prototypes/{micros,archive,archive-category-blogging,about,posts-feb1-25-feb1-25}-proposed.html, build-pages.mjs, build-post.mjs, assets/feb1-25-cover.webp
+- stardust/state.json — five pages → prototyped
+
+**Open questions:**
+- Bio; "Manns Systems" name; demo posts.
+
+**Next:** owner approval of the remaining pages, then the Astro build (named deviation from migrate).
+
+---
