@@ -1,0 +1,150 @@
+---
+import { mannsConfig, profileConfig } from '@/config'
+import type { PostRecord } from '@utils/records'
+
+interface Props {
+  records: PostRecord[]
+  micros: { date: string; text: string }[]
+}
+const { records, micros } = Astro.props
+const who = `${profileConfig.name}. ${profileConfig.bio}.`
+const latest = records[0]
+// Everything the terminal can answer, serialized for the client script.
+const site = {
+  who,
+  version: `${mannsConfig.company} version ${mannsConfig.version}`,
+  posts: records.map(r => [r.no, r.filed, r.title, r.url]),
+  micros: micros.map(m => [m.date, m.text]),
+  contact: profileConfig.links.map(l => [l.name, l.url]),
+}
+---
+<aside class="terminal" data-section="terminal" data-intent="explore" data-layout="console"
+  aria-labelledby="terminal-title" data-site={JSON.stringify(site)}>
+  <div class="terminal-bar">
+    <h2 id="terminal-title" class="terminal-name">{mannsConfig.company} · Terminal</h2>
+    <span class="terminal-mode"><span class="terminal-led" aria-hidden="true"></span>Local mode</span>
+  </div>
+  <div class="terminal-log" role="log" aria-live="polite" aria-label="Terminal output" tabindex="0">
+    <p class="cmd">whoami</p>
+    <p class="out">{who}</p>
+    {latest && (
+      <>
+        <p class="cmd">latest</p>
+        <p class="out"><span class="dim">No. {latest.no} · {latest.filed}</span> <a href={latest.url}>{latest.title}</a></p>
+      </>
+    )}
+  </div>
+  <form class="terminal-form" hidden>
+    <label for="terminal-input" class="terminal-prompt">&gt;</label>
+    <input id="terminal-input" name="command" type="text" autocomplete="off" autocapitalize="off"
+      spellcheck="false" placeholder="type help" aria-describedby="terminal-hint">
+    <span id="terminal-hint" class="visually-hidden">Commands: help, whoami, latest, posts, micros, contact, version, clear</span>
+  </form>
+</aside>
+
+<script>
+  // Manns Systems terminal. Answers come from site content only, through respond().
+  // To wire a backend later, make respond() call it and return the same Line[] shape.
+  type Part = string | { text: string; href?: string; dim?: boolean }
+  type Line = Part[]
+  type Site = {
+    who: string
+    version: string
+    posts: [string, string, string, string][]
+    micros: [string, string][]
+    contact: [string, string][]
+  }
+
+  const root = document.querySelector<HTMLElement>('.terminal')
+  if (root) {
+    const site: Site = JSON.parse(root.dataset.site ?? '{}')
+    const log = root.querySelector<HTMLElement>('.terminal-log') as HTMLElement
+    const form = root.querySelector<HTMLFormElement>('.terminal-form') as HTMLFormElement
+    const input = form.querySelector('input') as HTMLInputElement
+    const history: string[] = []
+    let at = 0
+
+    const post = (r: Site['posts'][number]): Line => [
+      { text: `No. ${r[0]} · ${r[1]} `, dim: true },
+      { text: r[2], href: r[3] },
+    ]
+
+    function respond(cmd: string): Line[] {
+      switch (cmd) {
+        case 'help':
+          return [['Commands: help, whoami, latest, posts, micros, contact, version, clear']]
+        case 'whoami':
+          return [[site.who]]
+        case 'latest':
+          return site.posts.length ? [post(site.posts[0])] : [['No records on file.']]
+        case 'posts':
+          return site.posts.map(post)
+        case 'micros':
+          return site.micros.map(m => [{ text: `${m[0]} `, dim: true }, m[1]])
+        case 'contact':
+          return [
+            site.contact.flatMap((c, i): Part[] => [
+              ...(i ? [{ text: ' · ', dim: true }] : []),
+              { text: c[0], href: c[1] },
+            ]),
+          ]
+        case 'version':
+          return [[site.version]]
+        case '':
+          return []
+        default:
+          return [[`Command not found: ${cmd}. Type help.`]]
+      }
+    }
+
+    function line(cls: string, parts: Line) {
+      const p = document.createElement('p')
+      p.className = cls
+      for (const part of parts) {
+        if (typeof part === 'string') {
+          p.append(part)
+          continue
+        }
+        const el = document.createElement(part.href ? 'a' : 'span')
+        if (part.href) (el as HTMLAnchorElement).href = part.href
+        if (part.dim) el.className = 'dim'
+        el.textContent = part.text
+        p.append(el)
+      }
+      log.append(p)
+    }
+
+    form.hidden = false
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      const cmd = input.value.trim().toLowerCase()
+      input.value = ''
+      if (cmd) {
+        history.push(cmd)
+        at = history.length
+      }
+      if (cmd === 'clear') {
+        log.textContent = ''
+        return
+      }
+      line('cmd', [cmd])
+      const lines = respond(cmd)
+      lines.forEach((parts, i) => line(i === lines.length - 1 ? 'out' : 'out out-cont', parts))
+      log.scrollTop = log.scrollHeight
+    })
+    input.addEventListener('keydown', e => {
+      if (e.key === 'ArrowUp' && at > 0) {
+        at--
+        input.value = history[at]
+        e.preventDefault()
+      } else if (e.key === 'ArrowDown' && at < history.length) {
+        at++
+        input.value = history[at] ?? ''
+        e.preventDefault()
+      }
+    })
+    root.addEventListener('pointerdown', e => {
+      if (!(e.target as Element).closest('a')) setTimeout(() => input.focus(), 0)
+    })
+  }
+</script>

@@ -1,0 +1,59 @@
+---
+import { mannsConfig } from '@/config'
+
+const [mark, ...rest] = mannsConfig.company.split(' ')
+---
+<div class="boot-screen" data-section="boot-screen" data-intent="brand-moment" data-layout="overlay" aria-hidden="true">
+  <div class="boot-inner">
+    <div class="boot-lockup">
+      <span class="striped">{mark}</span>
+      <span class="label">{rest.join(' ')}</span>
+    </div>
+    <p class="boot-version label">Version {mannsConfig.version}</p>
+    <div class="boot-meter">
+      <div class="boot-track"><div class="boot-fill"></div></div>
+      <span class="boot-pct">0%</span>
+    </div>
+    <p class="boot-skip label">Press any key to skip</p>
+  </div>
+</div>
+
+<script>
+  // First-visit loading screen: a timed 0-100% count, at most 1.6s, then a 300ms fade.
+  // The percentage is timed, not a measure of loading (the site is static). Any input skips it.
+  // It only runs when the inline head script added html.boot (JS on, storage readable, motion allowed).
+  const root = document.documentElement
+  const screen = document.querySelector<HTMLElement>('.boot-screen')
+  if (root.classList.contains('boot') && screen) {
+    const fill = screen.querySelector<HTMLElement>('.boot-fill')
+    const pct = screen.querySelector<HTMLElement>('.boot-pct')
+    const start = performance.now()
+    const DURATION = 1600
+    let done = false
+    const finish = () => {
+      if (done) return
+      done = true
+      fill?.style.setProperty('--p', '100')
+      if (pct) pct.textContent = '100%'
+      try {
+        localStorage.setItem('mns-booted', '1')
+      } catch {}
+      root.classList.add('boot-out')
+      setTimeout(() => root.classList.remove('boot', 'boot-out'), 320)
+      removeEventListener('keydown', finish)
+      screen.removeEventListener('pointerdown', finish)
+    }
+    const tick = (now: number) => {
+      if (done) return
+      const t = Math.min(1, (now - start) / DURATION)
+      const p = Math.round((1 - (1 - t) ** 3) * 100)
+      fill?.style.setProperty('--p', String(p))
+      if (pct) pct.textContent = `${p}%`
+      if (t < 1) requestAnimationFrame(tick)
+      else setTimeout(finish, 120)
+    }
+    addEventListener('keydown', finish)
+    screen.addEventListener('pointerdown', finish)
+    requestAnimationFrame(tick)
+  }
+</script>

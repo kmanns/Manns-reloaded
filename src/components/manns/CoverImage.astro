@@ -1,0 +1,29 @@
+---
+import path from 'node:path'
+import { Image } from 'astro:assets'
+import { url } from '@utils/url-utils'
+
+interface Props {
+  src: string
+  basePath: string
+  alt: string
+}
+const { src, basePath, alt } = Astro.props
+const isLocal = !/^(\/|https?:|data:)/.test(src)
+
+// Post covers are paths relative to the markdown file, so resolve them through a glob.
+let img: ImageMetadata | undefined
+if (isLocal) {
+  const files = import.meta.glob<ImageMetadata>(
+    '../../content/posts/**/*.{jpg,jpeg,png,webp,avif}',
+    { import: 'default' },
+  )
+  const key = path.posix.normalize(path.posix.join('../../', basePath, src))
+  const file = files[key]
+  if (file) img = await file()
+  else
+    console.error(`[cover] Image not found: ${key.replace('../../', 'src/')}`)
+}
+---
+{img && <Image class="cover" src={img} widths={[680, 1360]} sizes="(min-width: 760px) 68ch, 100vw" alt={alt} loading="eager" fetchpriority="high" />}
+{!isLocal && <img class="cover" src={src.startsWith('/') ? url(src) : src} alt={alt} loading="eager" fetchpriority="high">}

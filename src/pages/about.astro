@@ -1,22 +1,51 @@
 ---
+import { mannsConfig, profileConfig } from '@/config'
+import SubjectCard from '@components/manns/SubjectCard.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
 
-import MainGridLayout from '../layouts/MainGridLayout.astro'
-
-import { getEntry } from 'astro:content'
-import { i18n } from '../i18n/translation'
-import I18nKey from '../i18n/i18nKey'
-import Markdown from '@components/misc/Markdown.astro'
-
-const aboutPost = await getEntry('spec', 'about')
-
-const { Content } = await aboutPost.render()
+const { about } = mannsConfig
+const statementPlaceholder = !mannsConfig.statement && import.meta.env.DEV
 ---
-<MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
-        <div class="card-base z-10 px-9 py-6 relative w-full ">
-            <Markdown class="mt-2">
-                <Content />
-            </Markdown>
-        </div>
-    </div>
-</MainGridLayout>
+<BaseLayout title="About" description={about.intro}>
+  <div class="wrap">
+    <div class="page-title"><h1>About</h1></div>
+    <section class="about-file" data-section="subject-file" data-intent="introduce" data-layout="intake-form" aria-label="Subject file">
+      <div class="intake">
+        <SubjectCard caption={profileConfig.name} />
+        <dl class="fields">
+          <div class="field">
+            <dt class="label">Statement</dt>
+            <dd>
+              <p>{about.intro}</p>
+              {mannsConfig.statement && <p style="margin-top: 12px">{mannsConfig.statement}</p>}
+              {statementPlaceholder && (
+                <span data-placeholder="true" style="margin-top: 12px">
+                  <span class="placeholder-eyebrow">PLACEHOLDER · dev only</span>
+                  <span class="placeholder-shape">Write your bio in mannsConfig.statement (src/config.ts); it appears here and on the home page.</span>
+                </span>
+              )}
+            </dd>
+          </div>
+          <div class="field">
+            <dt class="label">Repository</dt>
+            <dd class="repo"><a href={about.repository.url}>{about.repository.name}</a><p class="meta">{about.repository.description}</p></dd>
+          </div>
+          {about.status && (
+            <div class="field"><dt class="label">Status</dt><dd><span class="notice">{about.status}</span></dd></div>
+          )}
+          <div class="field credits">
+            <dt class="label">Image credits</dt>
+            <dd>
+              <h2>Sources of images used in this site</h2>
+              <ul>
+                {about.credits.map(c => (
+                  <li><a href={c.url}>{c.label}</a>{c.by && <> by <a href={c.byUrl}>{c.by}</a></>}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

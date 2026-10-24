@@ -1,0 +1,114 @@
+---
+import { mannsConfig, profileConfig } from '@/config'
+import PostLedger from '@components/manns/PostLedger.astro'
+import SubjectCard from '@components/manns/SubjectCard.astro'
+import Terminal from '@components/manns/Terminal.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { getMicros, getRecords, isoDate } from '@utils/records'
+import { url } from '@utils/url-utils'
+
+const records = await getRecords()
+const latest = records[0]
+const micros = (await getMicros()).map(m => ({
+  date: isoDate(m.data.date),
+  text: m.body.trim(),
+  tags: m.data.tags ?? [],
+}))
+const [first, last] = profileConfig.name.split(' ')
+const statementPlaceholder = !mannsConfig.statement && import.meta.env.DEV
+---
+<BaseLayout>
+  <section class="identity" data-section="identity" data-intent="introduce" data-layout="intake-form" aria-labelledby="subject-name">
+    <div class="wrap">
+      <div class="identity-head">
+        <div class="identity-title">
+          <h1 id="subject-name" class="name striped">
+            <span class="name-line">{first}<span class="name-bar" aria-hidden="true"></span></span>
+            <span class="name-line">{last}<span class="name-bar" aria-hidden="true"></span></span>
+          </h1>
+          <p class="designation">{mannsConfig.designation}</p>
+        </div>
+        <Terminal records={records} micros={micros} />
+      </div>
+
+      <div class="intake">
+        <SubjectCard caption={`${records.length} records on file`} />
+        <dl class="fields">
+          <div class="field">
+            <dt class="label">Name</dt>
+            <dd>{profileConfig.name}, <em>the Manns with the Plan</em></dd>
+          </div>
+          <div class="field">
+            <dt class="label">Occupations</dt>
+            <dd><ul class="chips">{mannsConfig.occupations.map(o => <li class="chip">{o}</li>)}</ul></dd>
+          </div>
+          {mannsConfig.statement && (
+            <div class="field"><dt class="label">Statement</dt><dd>{mannsConfig.statement}</dd></div>
+          )}
+          {statementPlaceholder && (
+            <div class="field">
+              <dt class="label">Statement</dt>
+              <dd>
+                <span data-placeholder="true">
+                  <span class="placeholder-eyebrow">PLACEHOLDER · dev only</span>
+                  <span class="placeholder-shape">Write your bio in mannsConfig.statement (src/config.ts). This row is hidden on the live site until then.</span>
+                </span>
+              </dd>
+            </div>
+          )}
+          <div class="field">
+            <dt class="label">Contact</dt>
+            <dd><ul class="contact">{profileConfig.links.map(l => <li><a href={l.url}>{l.name}</a></li>)}</ul></dd>
+          </div>
+          {latest && (
+            <div class="field field-latest">
+              <dt class="label">Latest record</dt>
+              <dd class="latest">
+                <div>
+                  <p class="latest-title">{latest.title}</p>
+                  <p class="latest-meta"><span class="mono">No. {latest.no} · {latest.filed}</span>{latest.description && ` · ${latest.description}`}</p>
+                </div>
+                <a class="button" href={latest.url}>Read the latest post
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </dd>
+            </div>
+          )}
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="records" data-section="records" data-intent="browse" data-layout="ledger" aria-labelledby="records-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="records-title">Latest posts</h2>
+        <a class="more" href={url('/archive/')}>All posts in the archive</a>
+      </div>
+      <PostLedger records={records.slice(0, 6)} highlightFirst />
+    </div>
+  </section>
+
+  {micros.length > 0 && (
+    <section class="transmissions" data-section="transmissions" data-intent="browse" data-layout="teletype" aria-labelledby="micros-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="micros-title">Anti-Social Media</h2>
+          <a class="more" href={url('/micros/')}>All micros</a>
+        </div>
+        <p class="lede">Quick thoughts, observations, and snippets from daily life.</p>
+        <ol class="tty">
+          {micros.slice(0, 3).map(m => (
+            <li>
+              <time datetime={m.date}>{m.date}</time>
+              <div>
+                <p>{m.text}</p>
+                {m.tags.length > 0 && <p class="tags">{m.tags.map(t => <a href={url('/micros/')}>#{t}</a>)}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+</BaseLayout>

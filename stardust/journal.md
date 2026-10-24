@@ -181,3 +181,27 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner approval of the remaining pages, then the Astro build (named deviation from migrate).
 
 ---
+
+## 2026-10-24T19:10:00Z — migrate (Astro deviation) — Manns Systems design built into the Astro site
+
+**Prompt:** Owner: "approve all and build into Astro".
+
+**Decisions:**
+- Micros, archive, category archive, about and feb1-25 approved.
+- Fuwari layouts, components, styles and the Tailwind, swup, astro-icon and Svelte integrations removed; packages uninstalled. Markdown pipeline, content collections, RSS, sitemap and Pagefind kept.
+- New BaseLayout and components in src/components/manns/; one stylesheet assembled from the approved prototypes; fonts self-hosted; KaTeX CSS self-hosted (CDN link failed CORS).
+- Editable copy moved to `mannsConfig` in src/config.ts; src/content/spec/about.md folded into it.
+- remark plugin drops a duplicate title H1 and demotes other body H1s to H2.
+- Fixes found while validating: Escape now closes search on first press; ParallaxCard's page-wide CodePen body styles removed (broke layout); test.mdx stale layout line removed; Shiki inline background overridden to the navy panel.
+
+**Artifacts touched:**
+- src/** (layouts, components/manns, pages, styles/manns.css, utils/records.ts, plugins/remark-drop-title-heading.mjs, config.ts)
+- astro.config.mjs, package.json, pnpm-lock.yaml, README.md
+- stardust/state.json — eight pages → migrated; stardust/direction.md — deviation executed
+
+**Open questions:**
+- Bio (mannsConfig.statement); "Manns Systems" name; delete the Fuwari demo posts?
+
+**Next:** owner reviews the branch (pnpm build && pnpm preview), then merges to main to deploy.
+
+---

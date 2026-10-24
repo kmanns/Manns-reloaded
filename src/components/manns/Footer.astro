@@ -1,0 +1,17 @@
+---
+import { profileConfig } from '@/config'
+import { url } from '@utils/url-utils'
+
+const year = new Date().getFullYear()
+---
+<div class="stripe-rule" aria-hidden="true"></div>
+<footer class="site-footer" data-section="footer" data-intent="navigate" data-layout="bar">
+  <div class="wrap">
+    <p>&copy; {year} {profileConfig.name}. All Rights Reserved.</p>
+    <ul>
+      <li><a href={url('/rss.xml')}>RSS</a></li>
+      <li><a href={url('/sitemap-index.xml')}>Sitemap</a></li>
+      {profileConfig.links.map(link => <li><a href={link.url}>{link.name}</a></li>)}
+    </ul>
+  </div>
+</footer>

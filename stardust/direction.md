@@ -151,3 +151,16 @@ introduces him first, then his writing.
   `about`, `archive` (with `archive-category-blogging` as its filtered
   variant). `posts-feb1-25-feb1-25` and `posts-guide` follow the post
   archetype.
+
+### Named deviation executed (2026-10-24)
+
+The Astro build replaced `$stardust migrate` as recorded above. The approved
+prototypes were implemented in `src/` (BaseLayout, components under
+`src/components/manns/`, `src/styles/manns.css` assembled from the
+prototypes' CSS, pages for home, posts, micros, archive, about, 404).
+Validated with the same 1440/768/390/360 loop against `pnpm preview` on 13
+routes, plus behaviour tests (boot screen, terminal, Pagefind search, theme
+persistence, micros filter). `state.json` marks the eight pages `migrated`
+with their Astro route as `migratedPath`. The bio placeholder is not shipped:
+the Statement row is hidden until `mannsConfig.statement` is set (shown as a
+placeholder in `pnpm dev` only), which satisfies migrate's no-placeholder guard.
