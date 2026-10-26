@@ -93,7 +93,7 @@ export const mannsConfig = {
   designation: 'Homepage of the Manns himself',
   // Your bio, in your own words. Shown on the home page (Statement) and the About page.
   // Leave it empty to hide that row; in `pnpm dev` an outlined placeholder shows where it goes.
-  statement: '',
+  statement: 'Im a Dad and I work. More coming later.',
   occupations: ['Girl Dad', 'Tech', 'Retro Tech', 'Content & Commerce', 'Political hobbyist'],
   nav: [
     { name: 'Home', url: '/' },
