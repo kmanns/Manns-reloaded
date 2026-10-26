@@ -1,9 +1,5 @@
 import sitemap from '@astrojs/sitemap'
-import svelte from '@astrojs/svelte'
-import tailwind from '@astrojs/tailwind'
-import swup from '@swup/astro'
 import Compress from 'astro-compress'
-import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeComponents from 'rehype-components'/* Render the custom directive content */
@@ -17,6 +13,7 @@ import { AdmonitionComponent } from './src/plugins/rehype-component-admonition.m
 import { GithubCardComponent } from './src/plugins/rehype-component-github-card.mjs'
 import { parseDirectiveNode } from './src/plugins/remark-directive-rehype.js'
 import { remarkExcerpt } from './src/plugins/remark-excerpt.js'
+import { remarkDropTitleHeading } from './src/plugins/remark-drop-title-heading.mjs'
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 
 import mdx from '@astrojs/mdx';
@@ -26,29 +23,7 @@ export default defineConfig({
   site: 'https://khalilmanns.com/',
   base: '/',
   trailingSlash: 'always',
-  integrations: [tailwind({
-    nesting: true,
-  }), swup({
-    theme: false,
-    animationClass: 'transition-swup-', // see https://swup.js.org/options/#animationselector
-    // the default value `transition-` cause transition delay
-    // when the Tailwind class `transition-all` is used
-    containers: ['main', '#toc'],
-    smoothScrolling: true,
-    cache: true,
-    preload: true,
-    accessibility: true,
-    updateHead: true,
-    updateBodyClass: false,
-    globalInstance: true,
-  }), icon({
-    include: {
-      'preprocess: vitePreprocess(),': ['*'],
-      'fa6-brands': ['*'],
-      'fa6-regular': ['*'],
-      'fa6-solid': ['*'],
-    },
-  }), svelte(), sitemap(), Compress({
+  integrations: [sitemap(), Compress({
     CSS: false,
     Image: false,
     Action: {
@@ -57,6 +32,7 @@ export default defineConfig({
   }), mdx()],
   markdown: {
     remarkPlugins: [
+      remarkDropTitleHeading,
       remarkMath,
       remarkReadingTime,
       remarkExcerpt,

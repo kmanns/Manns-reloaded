@@ -1,0 +1,9 @@
+---
+// For standalone markdown pages (404). They bring their own styles; no loading screen.
+import BaseLayout from './BaseLayout.astro'
+
+const { frontmatter } = Astro.props
+---
+<BaseLayout title={frontmatter?.title} boot={false}>
+  <slot />
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets'
+import avatar from '../../assets/images/demo-avatar.jpg'
+
+interface Props {
+  caption: string
+}
+const { caption } = Astro.props
+---
+<figure class="subject-card">
+  <Image src={avatar} width={480} height={480} format="webp" quality={80}
+    alt="Khalil's avatar: a metallic letter M with a game-controller pad and glowing amber and cyan lights"
+    loading="eager" fetchpriority="high" />
+  <figcaption class="badge-row">
+    <span class="badge">Subject</span>
+    <span class="label">{caption}</span>
+  </figcaption>
+</figure>

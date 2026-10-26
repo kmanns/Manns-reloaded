@@ -25,3 +25,11 @@ pnpm-debug.log*
 package-lock.json
 bun.lockb
 yarn.lock
+
+# >>> stardust
+.env
+.env.*
+# <<< stardust
+
+# impeccable scratch captures
+.impeccable/review/

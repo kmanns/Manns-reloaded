@@ -1,0 +1,80 @@
+---
+import '@fontsource/alfa-slab-one'
+import '@fontsource-variable/source-serif-4/opsz.css'
+import '@fontsource-variable/inter'
+import '@fontsource-variable/jetbrains-mono'
+import 'katex/dist/katex.min.css'
+import '../styles/manns.css'
+import { profileConfig, siteConfig } from '@/config'
+import BootScreen from '@components/manns/BootScreen.astro'
+import Footer from '@components/manns/Footer.astro'
+import Header from '@components/manns/Header.astro'
+import SearchDialog from '@components/manns/SearchDialog.astro'
+import { url } from '@utils/url-utils'
+import { defaultFavicons } from '../constants/icon'
+
+interface Props {
+  title?: string
+  description?: string
+  article?: boolean
+  boot?: boolean
+}
+const { title, description, article = false, boot = true } = Astro.props
+const pageTitle = title
+  ? `${title} - ${siteConfig.title}`
+  : `${siteConfig.title} - ${siteConfig.subtitle}`
+const desc = description || profileConfig.bio
+const favicons =
+  siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons
+---
+<!DOCTYPE html>
+<html lang={siteConfig.lang.replace('_', '-')}>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc}>
+    <meta name="author" content={profileConfig.name}>
+    <meta property="og:site_name" content={siteConfig.title}>
+    <meta property="og:url" content={Astro.url}>
+    <meta property="og:title" content={pageTitle}>
+    <meta property="og:description" content={desc}>
+    <meta property="og:type" content={article ? 'article' : 'website'}>
+    <meta name="twitter:card" content="summary">
+    <meta name="generator" content={Astro.generator}>
+    <meta name="theme-color" content="#F5F5DC" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#001E44" media="(prefers-color-scheme: dark)">
+    {favicons.map(favicon => (
+      <link rel="icon" href={favicon.src.startsWith('/') ? url(favicon.src) : favicon.src} sizes={favicon.sizes}
+        media={favicon.theme && `(prefers-color-scheme: ${favicon.theme})`}>
+    ))}
+    <link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={new URL('rss.xml', Astro.site)}>
+    <script is:inline define:vars={{ boot }}>
+      // Theme restore + first-visit boot gate, before paint so neither flashes.
+      (() => {
+        const d = document.documentElement
+        let s = null
+        try { s = window.localStorage } catch {}
+        try {
+          const t = s?.getItem('mns-theme')
+          if (t === 'light' || t === 'dark') d.dataset.theme = t
+        } catch {}
+        const calm = matchMedia('(prefers-reduced-motion: reduce)').matches
+        try {
+          if (boot && s && !calm && !s.getItem('mns-booted')) d.classList.add('boot')
+        } catch {}
+      })()
+    </script>
+    <slot name="head" />
+  </head>
+  <body>
+    {boot && <BootScreen />}
+    <a class="visually-hidden skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <SearchDialog />
+  </body>
+</html>

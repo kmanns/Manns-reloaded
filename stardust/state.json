@@ -1,0 +1,298 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:migrate",
+    "writtenAt": "2026-10-24T19:07:08Z",
+    "stardustVersion": "0.34.1"
+  },
+  "site": {
+    "originUrl": "https://www.khalilmanns.com",
+    "deployUrl": null,
+    "extractedAt": "2026-10-23T02:13:45Z",
+    "pageCap": 8,
+    "totalDiscovered": 23,
+    "crawled": 8
+  },
+  "direction": {
+    "resolvedAt": "2026-10-23T02:40:00Z",
+    "phrase": "I'd like to redesign www.khalilmanns.com ... retro-futuristic technology company feel. Like a 1980's Microsoft logo; ... Maniac ... still be based in Astro (+ Penn State Blue/cream, identity-first home)",
+    "directionFile": "stardust/direction.md",
+    "iaFidelity": "reimagined"
+  },
+  "flow": "redesign",
+  "flowChosenAt": "2026-10-23T02:13:45Z",
+  "flowSource": "user-phrase",
+  "pages": [
+    {
+      "slug": "index",
+      "url": "https://www.khalilmanns.com/",
+      "title": "Khalil Manns - Homepage of the Manns himself",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:12.439Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-23T02:36:38Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-23T15:55:07Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/index.json",
+      "prototypePath": "stardust/prototypes/index-proposed.html",
+      "migratedPath": "src/pages/index.astro"
+    },
+    {
+      "slug": "about",
+      "url": "https://www.khalilmanns.com/about/",
+      "title": "About - Khalil Manns",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:12.041Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-24T18:47:39Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T18:51:25Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/about.json",
+      "prototypePath": "stardust/prototypes/about-proposed.html",
+      "migratedPath": "src/pages/about.astro"
+    },
+    {
+      "slug": "micros",
+      "url": "https://www.khalilmanns.com/micros/",
+      "title": "Micro Posts - Khalil Manns",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:11.751Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-24T18:47:39Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T18:51:25Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/micros.json",
+      "prototypePath": "stardust/prototypes/micros-proposed.html",
+      "migratedPath": "src/pages/micros.astro"
+    },
+    {
+      "slug": "archive",
+      "url": "https://www.khalilmanns.com/archive/",
+      "title": "Archive - Khalil Manns",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:12.987Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-24T18:47:39Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T18:51:25Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/archive.json",
+      "prototypePath": "stardust/prototypes/archive-proposed.html",
+      "migratedPath": "src/pages/archive/index.astro"
+    },
+    {
+      "slug": "archive-category-blogging",
+      "url": "https://www.khalilmanns.com/archive/category/Blogging/",
+      "title": "Archive - Khalil Manns",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:19.919Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-24T18:47:39Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T18:51:25Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/archive-category-blogging.json",
+      "prototypePath": "stardust/prototypes/archive-category-blogging-proposed.html",
+      "migratedPath": "src/pages/archive/category/[category].astro"
+    },
+    {
+      "slug": "posts-mar8-25-mar8-25",
+      "url": "https://www.khalilmanns.com/posts/mar8-25/mar8-25/",
+      "title": "March Update and To-Do - Khalil Manns",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:18.846Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-23T17:49:37Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T17:10:27Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/posts-mar8-25-mar8-25.json",
+      "prototypePath": "stardust/prototypes/posts-mar8-25-mar8-25-proposed.html",
+      "migratedPath": "src/pages/posts/[...slug].astro"
+    },
+    {
+      "slug": "posts-feb1-25-feb1-25",
+      "url": "https://www.khalilmanns.com/posts/feb1-25/feb1-25/",
+      "title": "Inching Toward Launch - Khalil Manns",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:18.629Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-24T18:47:55Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T18:51:25Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/posts-feb1-25-feb1-25.json",
+      "prototypePath": "stardust/prototypes/posts-feb1-25-feb1-25-proposed.html",
+      "migratedPath": "src/pages/posts/[...slug].astro"
+    },
+    {
+      "slug": "posts-guide",
+      "url": "https://www.khalilmanns.com/posts/guide/",
+      "title": "Simple Guides for Fuwari - Khalil Manns",
+      "type": null,
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-23T02:12:19.555Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-23T02:19:59Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-23T17:49:37Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-24T17:10:27Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-24T19:07:08Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/posts-guide.json",
+      "prototypePath": "stardust/prototypes/posts-guide-proposed.html",
+      "migratedPath": "src/pages/posts/[...slug].astro"
+    }
+  ]
+}

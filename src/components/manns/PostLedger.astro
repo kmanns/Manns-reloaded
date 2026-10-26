@@ -1,0 +1,32 @@
+---
+import type { PostRecord } from '@utils/records'
+
+interface Props {
+  records: PostRecord[]
+  filedFormat?: 'full' | 'month-day'
+  showTags?: boolean
+  highlightFirst?: boolean
+}
+const {
+  records,
+  filedFormat = 'full',
+  showTags = false,
+  highlightFirst = false,
+} = Astro.props
+---
+<div class="ledger-cols label" aria-hidden="true"><span>No.</span><span>Filed</span><span>Record</span><span class="dept">Department</span></div>
+<ol class="ledger" reversed>
+  {records.map((r, i) => (
+    <li class:list={['entry', { 'is-latest': highlightFirst && i === 0 }]}>
+      <span class="no mono">No. {r.no}</span>
+      <time class="filed mono" datetime={r.filed}>{filedFormat === 'full' ? r.filed : r.filed.slice(5)}</time>
+      <div class="body">
+        <h3><a href={r.url}>{r.title}</a></h3>
+        {showTags
+          ? r.tags.length > 0 && <p class="excerpt">{r.tags.map(t => `#${t}`).join(' ')}</p>
+          : r.description && <p class="excerpt">{r.description}</p>}
+      </div>
+      {r.category && <a class="dept chip" href={r.categoryUrl}>{r.category}</a>}
+    </li>
+  ))}
+</ol>

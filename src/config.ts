@@ -85,3 +85,33 @@ export const licenseConfig: LicenseConfig = {
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 }
+
+// Manns Systems redesign. Everything a visitor reads that is not post content lives here.
+export const mannsConfig = {
+  company: 'Manns Systems',        // The fictional company name in the wordmark lockup ("MANNS" + "SYSTEMS")
+  version: '2.023.9',              // Shown on the first-visit loading screen and by the terminal's `version` command
+  designation: 'Homepage of the Manns himself',
+  // Your bio, in your own words. Shown on the home page (Statement) and the About page.
+  // Leave it empty to hide that row; in `pnpm dev` an outlined placeholder shows where it goes.
+  statement: 'Im a Dad and I work. More coming later.',
+  occupations: ['Girl Dad', 'Tech', 'Retro Tech', 'Content & Commerce', 'Political hobbyist'],
+  nav: [
+    { name: 'Home', url: '/' },
+    { name: 'Micros', url: '/micros/' },
+    { name: 'Archive', url: '/archive/' },
+    { name: 'About', url: '/about/' },
+  ],
+  about: {
+    intro: 'This is the home base for Khalil Manns.',
+    repository: {
+      name: 'kmanns / Manns-reloaded',
+      url: 'https://github.com/kmanns/Manns-reloaded',
+      description: 'Replatform project for khalilmanns.com · MIT · Astro',
+    },
+    status: 'This site is still a work in progress!',  // Set to '' to hide the Status row
+    // Image credits for third-party images on the site, e.g.
+    // { label: 'Photo title', url: 'https://…', by: 'Author', byUrl: 'https://…' }
+    // The row is hidden while the list is empty.
+    credits: [] as { label: string; url: string; by?: string; byUrl?: string }[],
+  },
+}

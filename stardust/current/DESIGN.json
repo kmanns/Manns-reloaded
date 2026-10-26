@@ -1,0 +1,532 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-10-23T02:14:11Z",
+    "mode": "descriptive",
+    "read": [
+      "stardust/current/_brand-extraction.json",
+      "stardust/current/_computed-styles.json"
+    ]
+  },
+  "extensions": {
+    "componentStyle": [
+      {
+        "name": "post-card",
+        "radius": "16px",
+        "bg": "#ffffff",
+        "accent": "left 4px bar in --primary"
+      },
+      {
+        "name": "chip",
+        "radius": "9999px",
+        "bg": "oklch(0.95 0.025 250)"
+      }
+    ],
+    "motifs": {
+      "borderRadius": {
+        "mode": "8px",
+        "areaMode": "16px",
+        "occurrences": [
+          {
+            "value": "8px",
+            "count": 265,
+            "area": 1940343,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#navbar > div:nth-of-type(2) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#navbar > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#navbar > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#navbar > div:nth-of-type(2) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#navbar > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)"
+              }
+            ]
+          },
+          {
+            "value": "7px",
+            "count": 210,
+            "area": 810326,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#navbar > div:nth-of-type(2) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#display-settings-switch"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#scheme-switch"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#navbar > div:nth-of-type(2) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#display-settings-switch"
+              }
+            ]
+          },
+          {
+            "value": "6px",
+            "count": 120,
+            "area": 320492,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#hueValue"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#hueValue"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "div > div > section > blockquote:nth-of-type(2) > section > ul > li:nth-of-type(1) > a"
+              }
+            ]
+          },
+          {
+            "value": "5.25px",
+            "count": 104,
+            "area": 230343,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#hueValue"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#hueValue"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "div > div > section > blockquote:nth-of-type(2) > section > ul > li:nth-of-type(1) > a"
+              }
+            ]
+          },
+          {
+            "value": "16px",
+            "count": 53,
+            "area": 12401104,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#light-dark-panel > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar > div:nth-of-type(1) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar-sticky > widget-layout:nth-of-type(1)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#light-dark-panel > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#sidebar > div:nth-of-type(1) > div"
+              }
+            ]
+          },
+          {
+            "value": "14px",
+            "count": 46,
+            "area": 6081591,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar > div:nth-of-type(1) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar-sticky > widget-layout:nth-of-type(1)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar-sticky > widget-layout:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#sidebar > div:nth-of-type(1) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#sidebar-sticky > widget-layout:nth-of-type(1)"
+              }
+            ]
+          },
+          {
+            "value": "9999px",
+            "count": 22,
+            "area": 2003,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > div > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > div > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > div > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(2) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div"
+              }
+            ]
+          },
+          {
+            "value": "12px",
+            "count": 20,
+            "area": 2028680,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(3) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > a"
+              }
+            ]
+          },
+          {
+            "value": "10.5px",
+            "count": 16,
+            "area": 731394,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(3) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(11) > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > a"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#sidebar > div:nth-of-type(1) > div > a"
+              }
+            ]
+          },
+          {
+            "value": "3.5px",
+            "count": 15,
+            "area": 37140,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#display-setting > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#display-setting > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#display-setting > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > div > div:nth-of-type(2) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(2) > div > div:nth-of-type(2) > div"
+              }
+            ]
+          },
+          {
+            "value": "4px",
+            "count": 15,
+            "area": 48512,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#display-setting > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#display-setting > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#display-setting > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > div > div:nth-of-type(2) > div"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#content-wrapper > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(2) > div > div:nth-of-type(2) > div"
+              }
+            ]
+          },
+          {
+            "value": "0px 0px 14px 14px",
+            "count": 7,
+            "area": 128219,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/category/Blogging/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/posts/feb1-25/feb1-25/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              }
+            ]
+          },
+          {
+            "value": "0px 0px 16px 16px",
+            "count": 7,
+            "area": 376096,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/archive/category/Blogging/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              },
+              {
+                "url": "https://www.khalilmanns.com/posts/feb1-25/feb1-25/",
+                "selector": "#navbar > div:nth-of-type(2)"
+              }
+            ]
+          },
+          {
+            "value": "50%",
+            "count": 2,
+            "area": 1017,
+            "sources": [
+              {
+                "url": "https://www.khalilmanns.com/about/",
+                "selector": "#GCj2o29n-avatar"
+              }
+            ]
+          }
+        ]
+      },
+      "shadows": [
+        {
+          "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px",
+          "count": 7,
+          "sources": [
+            {
+              "url": "https://www.khalilmanns.com/",
+              "selector": "#light-dark-panel > div"
+            },
+            {
+              "url": "https://www.khalilmanns.com/about/",
+              "selector": "#light-dark-panel > div"
+            },
+            {
+              "url": "https://www.khalilmanns.com/archive/",
+              "selector": "#light-dark-panel > div"
+            },
+            {
+              "url": "https://www.khalilmanns.com/archive/category/Blogging/",
+              "selector": "#light-dark-panel > div"
+            },
+            {
+              "url": "https://www.khalilmanns.com/posts/feb1-25/feb1-25/",
+              "selector": "#light-dark-panel > div"
+            }
+          ]
+        }
+      ],
+      "gradients": [
+        {
+          "value": "linear-gradient(to right, oklch(0.8 0.1 0), oklch(0.8 0.1 30), oklch(0.8 0.1 60), oklch(0.8 0.1 90), oklch(0.8 0.1 120), oklch(0.8 0.1 150), oklch(0.8 0.1 180), oklch(0.8 0.1 210), oklch(0.8 0.1 240), oklch(0.8 0.1 270), oklch(0.8 0.1 300)\u2026",
+          "count": 14,
+          "area": 83055,
+          "sources": [
+            {
+              "url": "https://www.khalilmanns.com/",
+              "selector": "#colorSlider"
+            },
+            {
+              "url": "https://www.khalilmanns.com/about/",
+              "selector": "#colorSlider"
+            },
+            {
+              "url": "https://www.khalilmanns.com/archive/",
+              "selector": "#colorSlider"
+            },
+            {
+              "url": "https://www.khalilmanns.com/archive/category/Blogging/",
+              "selector": "#colorSlider"
+            },
+            {
+              "url": "https://www.khalilmanns.com/posts/feb1-25/feb1-25/",
+              "selector": "#colorSlider"
+            }
+          ]
+        }
+      ],
+      "patterns": [
+        "card",
+        "chip",
+        "hero-with-image",
+        "profile-card",
+        "sidebar-widget"
+      ]
+    },
+    "voice": {
+      "heroHeadline": null,
+      "tagline": "The Manns with the Plan: Girl Dad, Tech, Retro Tech, Content & Commerce, political hobbyist",
+      "siteSubtitle": "Homepage of the Manns himself",
+      "firstParagraph": "Hola. I'd like to get a better main image, but I'm thinking of what I want to put there. In fact, note to self, I should try to change the main image and logo.",
+      "ctas": [
+        "Home",
+        "Micros",
+        "Archive",
+        "About",
+        "GitHub"
+      ],
+      "heroImage": {
+        "src": "src/assets/images/demo-banner.png",
+        "alt": "laptop internals banner"
+      },
+      "heroMedium": null,
+      "toneGuess": "casual, self-aware"
+    },
+    "systemComponents": [
+      {
+        "kind": "header",
+        "pages": 7,
+        "labels": [
+          "Home",
+          "Micros",
+          "Archive",
+          "About",
+          "GitHub"
+        ]
+      },
+      {
+        "kind": "sidebar",
+        "pages": 7,
+        "headings": [
+          "Categories",
+          "Tags"
+        ],
+        "note": "profile card + categories + tags"
+      },
+      {
+        "kind": "footer",
+        "pages": 8,
+        "text": "\u00a9 2025 Khalil Manns. All Rights Reserved. / RSS / Sitemap \u00b7 Powered by Astro & Fuwari"
+      },
+      {
+        "kind": "header",
+        "pages": 1,
+        "labels": [
+          "Home",
+          "Archive",
+          "Micros",
+          "About",
+          "Github"
+        ],
+        "note": "micros page uses its own header and layout"
+      }
+    ],
+    "breakpoints": {
+      "containerMaxWidth": 1200,
+      "probeWidth": null,
+      "caps": [
+        {
+          "kind": "shell",
+          "px": 1200,
+          "authoredVia": "tailwind max-w",
+          "tier": "observed"
+        }
+      ],
+      "modules": [],
+      "note": "cap-probe not run: the redesign replaces the shell; container width read from the captured layout."
+    }
+  }
+}

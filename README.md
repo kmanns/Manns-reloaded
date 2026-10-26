@@ -1,6 +1,6 @@
 # Khalil Manns - Personal Blog
 
-A modern personal blog built with [Astro](https://astro.build) and the [Fuwari](https://github.com/saicaca/fuwari) theme. This site serves as my digital space for sharing thoughts, insights, and updates on technology, retro tech, content creation, and more.
+A personal blog built with [Astro](https://astro.build), presented as Manns Systems, a 1980s technology company that never existed (after the Netflix series *Maniac*), in Penn State Blue and cream. It started from the [Fuwari](https://github.com/saicaca/fuwari) theme. This site serves as my digital space for sharing thoughts, insights, and updates on technology, retro tech, content creation, and more.
 
 ## Features
 
@@ -10,7 +10,8 @@ A modern personal blog built with [Astro](https://astro.build) and the [Fuwari](
 - **📱 Responsive Design** - Optimized for all devices
 - **🔍 Search Functionality** - Find content quickly across all posts
 - **📋 Table of Contents** - Easy navigation for longer articles
-- **💬 Comments** - Engage with readers through integrated comments
+- **🖥️ Terminal** - A home-page console that answers from site content (`help`, `posts`, `micros`, `contact`...)
+- **⏳ Loading screen** - A short Manns Systems boot screen on a visitor's first visit
 - **🏷️ Tags & Categories** - Organized content discovery
 
 ## Content Types
@@ -34,10 +35,10 @@ Quick thoughts and updates, similar to social media posts:
 ## Tech Stack
 
 - **Framework**: [Astro](https://astro.build) - Modern static site generator
-- **Styling**: [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
-- **Theme**: [Fuwari](https://github.com/saicaca/fuwari) - Clean, customizable Astro theme
-- **Deployment**: [Github Pages](https://github.com) - Fast, reliable hosting
-- **Icons**: [Iconify](https://iconify.design) - Comprehensive icon library
+- **Styling**: plain CSS in `src/styles/manns.css` (design tokens at the top; system documented in `DESIGN.md`)
+- **Type**: Alfa Slab One (wordmark), Source Serif 4, Inter, JetBrains Mono, self-hosted via Fontsource
+- **Search**: [Pagefind](https://pagefind.app), built after `astro build`
+- **Deployment**: [GitHub Pages](https://pages.github.com)
 
 ## Getting Started
 
@@ -103,11 +104,11 @@ Your short content here (tweet-like format)
 ### Configuration
 
 Customize the blog by editing `src/config.ts`:
-- Site information (title, description, author)
-- Navigation menu items
-- Social media links
-- Theme colors and settings
-- Banner and favicon configuration
+- `siteConfig` / `profileConfig` - site title, your name, tagline and social links
+- `mannsConfig` - company name, loading-screen version, home-page occupations, navigation, your bio (`statement`) and the About page fields
+- `licenseConfig` - the license shown under each post
+
+Colors, type and spacing are tokens at the top of `src/styles/manns.css`. The design rationale lives in `PRODUCT.md`, `DESIGN.md` and `stardust/`.
 
 ## Deployment
 
@@ -139,4 +140,4 @@ This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/lic
 
 ---
 
-*Built with ❤️ using Astro and the Fuwari theme*
+*Built with ❤️ using Astro. Originally based on the Fuwari theme.*

@@ -1,0 +1,65 @@
+---
+import PostLedger from '@components/manns/PostLedger.astro'
+import { getCategoryList, getTagList } from '@utils/content-utils'
+import { getRecords } from '@utils/records'
+import { url, getCategoryUrl } from '@utils/url-utils'
+
+interface Props {
+  category?: string
+  tag?: string
+}
+const { category, tag } = Astro.props
+const all = await getRecords()
+// category === '' means "uncategorized"; undefined means no department filter.
+const records = all.filter(
+  r =>
+    (category === undefined || r.category === category) &&
+    (tag === undefined || r.tags.includes(tag)),
+)
+const filter =
+  category !== undefined ? category || 'Uncategorized' : tag ? `#${tag}` : ''
+const categories = await getCategoryList()
+const tags = await getTagList()
+const years = [...new Set(records.map(r => r.filed.slice(0, 4)))]
+const plural = (n: number) => `${n} record${n === 1 ? '' : 's'}`
+---
+<div class="wrap records-page">
+  <div class="page-title">
+    <h1>Archive{filter && <><span aria-hidden="true"> · </span>{filter}</>}</h1>
+    <p class="count label">{plural(records.length)}{filter && (category !== undefined ? ' in this department' : ' with this tag')}</p>
+  </div>
+
+  <section data-section="filters" data-intent="filter" data-layout="ruled-rows" aria-label="Filter the archive">
+    <dl class="fields filters">
+      <div class="field">
+        <dt class="label">Department</dt>
+        <dd><ul class="chips">
+          {categories.map(c => (
+            <li><a class="chip filter-chip" href={getCategoryUrl(c.name)} aria-current={c.name === category ? 'page' : undefined}>{c.name}<span class="n">{c.count}</span></a></li>
+          ))}
+        </ul></dd>
+      </div>
+      <div class="field">
+        <dt class="label">Tags</dt>
+        <dd><ul class="chips">
+          {tags.map(t => (
+            <li><a class="chip filter-chip" href={url(`/archive/tag/${t.name}/`)} aria-current={t.name === tag ? 'page' : undefined}>{t.name}</a></li>
+          ))}
+        </ul></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section data-section="records" data-intent="browse" data-layout="ledger" aria-label="Records">
+    {years.map(year => {
+      const inYear = records.filter(r => r.filed.startsWith(year))
+      return (
+        <>
+          <div class="year"><h2>{year}</h2><span class="label">{plural(inYear.length)}</span></div>
+          <PostLedger records={inYear} filedFormat="month-day" showTags />
+        </>
+      )
+    })}
+    {filter && <a class="show-all" href={url('/archive/')}>Show all records</a>}
+  </section>
+</div>
