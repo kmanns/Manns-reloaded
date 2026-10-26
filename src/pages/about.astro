@@ -33,6 +33,7 @@ const statementPlaceholder = !mannsConfig.statement && import.meta.env.DEV
           {about.status && (
             <div class="field"><dt class="label">Status</dt><dd><span class="notice">{about.status}</span></dd></div>
           )}
+          {about.credits.length > 0 && (
           <div class="field credits">
             <dt class="label">Image credits</dt>
             <dd>
@@ -44,6 +45,7 @@ const statementPlaceholder = !mannsConfig.statement && import.meta.env.DEV
               </ul>
             </dd>
           </div>
+          )}
         </dl>
       </div>
     </section>

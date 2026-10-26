@@ -224,3 +224,21 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner reviews the pull request and merges to deploy.
 
 ---
+
+## 2026-10-26T00:20:00Z — content — hidden drafts and stale image credits removed
+
+**Prompt:** Owner: "remove the drafts and stale credits too".
+
+**Decisions:**
+- Deleted the hidden Fuwari drafts (draft.md, markdown.md, video.md).
+- Emptied mannsConfig.about.credits (Unsplash banner, guide cover and Fuwari's demo avatar are no longer on the site); the About page hides the Image credits row while the list is empty.
+
+**Artifacts touched:**
+- src/content/posts/{draft,markdown,video}.md — deleted; src/config.ts, src/pages/about.astro — updated
+
+**Open questions:**
+- Bio; "Manns Systems" name.
+
+**Next:** owner merges kmanns/Manns-reloaded#1.
+
+---

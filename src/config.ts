@@ -109,10 +109,9 @@ export const mannsConfig = {
       description: 'Replatform project for khalilmanns.com · MIT · Astro',
     },
     status: 'This site is still a work in progress!',  // Set to '' to hide the Status row
-    credits: [
-      { label: 'Unsplash', url: 'https://unsplash.com/' },
-      { label: '星と少女', url: 'https://www.pixiv.net/artworks/108916539', by: 'Stella', byUrl: 'https://www.pixiv.net/users/93273965' },
-      { label: 'Rabbit - v1.4 Showcase', url: 'https://civitai.com/posts/586908', by: 'Rabbit_YourMajesty', byUrl: 'https://civitai.com/user/Rabbit_YourMajesty' },
-    ],
+    // Image credits for third-party images on the site, e.g.
+    // { label: 'Photo title', url: 'https://…', by: 'Author', byUrl: 'https://…' }
+    // The row is hidden while the list is empty.
+    credits: [] as { label: string; url: string; by?: string; byUrl?: string }[],
   },
 }
