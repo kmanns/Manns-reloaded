@@ -205,3 +205,22 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner reviews the branch (pnpm build && pnpm preview), then merges to main to deploy.
 
 ---
+
+## 2026-10-26T00:10:00Z — content — Fuwari demo posts deleted
+
+**Prompt:** Owner: "delete the demo posts and open a PR".
+
+**Decisions:**
+- Deleted src/content/posts/guide/ and markdown-extended.md. Four posts remain (No. 001–004); the Examples and Guides departments disappear from the archive.
+- Left the three hidden Fuwari drafts (draft.md, markdown.md, video.md) and the About image credits as they are; flagged to the owner.
+- stardust/prototypes/posts-guide-proposed.html stays as the approved stress-test record; its source post no longer exists.
+
+**Artifacts touched:**
+- src/content/posts/guide/, src/content/posts/markdown-extended.md — deleted
+
+**Open questions:**
+- Bio; "Manns Systems" name; remove the hidden drafts and the stale image credits?
+
+**Next:** owner reviews the pull request and merges to deploy.
+
+---
