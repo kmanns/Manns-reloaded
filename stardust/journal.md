@@ -242,3 +242,18 @@ See `skills/stardust/reference/journal-format.md` for entry format.
 **Next:** owner merges kmanns/Manns-reloaded#1.
 
 ---
+
+## 2026-10-26T00:17:00Z — release — PR merged to main
+
+**Prompt:** Owner: "yes, merge into main".
+
+**Decisions:**
+- Owner pushed their bio to the branch first (mannsConfig.statement, commit 1bec8f3); rebuilt and validated home and About with it before merging.
+- Merged kmanns/Manns-reloaded#1 with a merge commit (db5a12b); the GitHub Pages deploy workflow started on the push to main.
+
+**Open questions:**
+- "Manns Systems" name (unconfirmed, still the default).
+
+**Next:** confirm the deploy succeeded and the live site serves the new design.
+
+---
